@@ -1,12 +1,15 @@
 {
-  "name": "MAT1033C SLC Survival Guide",
-  "short_name": "MAT1033C",
-  "description": "Intermediate Algebra formula reference for PBSC students. Free, accessible, multilingual.",
+  "name": "Algebra SLC Survival Guide",
+  "short_name": "Algebra Guide",
+  "description": "Free algebra formula reference for PBSC students. Works for developmental, intermediate, and college algebra.",
   "start_url": "./",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#08152C",
   "theme_color": "#08152C",
   "lang": "en",
+  "dir": "ltr",
+  "categories": ["education"],
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -19,8 +22,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ],
-  "categories": ["education"],
   "screenshots": []
 }

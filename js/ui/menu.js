@@ -9,6 +9,7 @@
  */
 
 import { navigateToSection } from './render.js';
+import { setLanguage, SUPPORTED } from '../i18n.js';
 
 /**
  * initMenu — wire up hamburger button, overlay, and nav links.
@@ -67,6 +68,60 @@ function buildMenuLinks(sidemenu, AppState) {
 
   // Mark first link active initially
   updateActiveLink(sidemenu, 0);
+
+  // Language switcher below section links
+  buildLangSwitcher(sidemenu, AppState);
+}
+
+/**
+ * buildLangSwitcher — inject a divider and language select into the drawer.
+ * @param {HTMLElement} sidemenu
+ * @param {Object}      AppState
+ */
+function buildLangSwitcher(sidemenu, AppState) {
+  const lang = AppState.lang;
+
+  // Divider
+  const divider = document.createElement('div');
+  divider.className = 'menu-divider';
+  divider.setAttribute('aria-hidden', 'true');
+  sidemenu.appendChild(divider);
+
+  // Label + select wrapper
+  const wrapper = document.createElement('div');
+  wrapper.className = 'lang-switcher';
+
+  const label = document.createElement('label');
+  label.htmlFor   = 'langSelect';
+  label.className = 'lang-label';
+  label.textContent = '🌐 Language';
+
+  const select = document.createElement('select');
+  select.id        = 'langSelect';
+  select.className = 'lang-select';
+  select.setAttribute('aria-label', 'Select language');
+
+  const langNames = { en: 'English', es: 'Español', ht: 'Kreyòl ayisyen' };
+
+  SUPPORTED.forEach(code => {
+    const opt = document.createElement('option');
+    opt.value       = code;
+    opt.textContent = (lang === code ? '✓ ' : '') + langNames[code];
+    opt.selected    = code === lang;
+    if (code === lang) {
+      opt.style.fontWeight = '700';
+      opt.style.color      = '#C8973A';
+    }
+    select.appendChild(opt);
+  });
+
+  select.addEventListener('change', () => {
+    setLanguage(select.value);
+  });
+
+  wrapper.appendChild(label);
+  wrapper.appendChild(select);
+  sidemenu.appendChild(wrapper);
 }
 
 /**
