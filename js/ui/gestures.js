@@ -57,7 +57,10 @@ function initSectionSwipe(AppState) {
 
     // Ignore vertical-dominant swipes (scrolling)
     if (Math.abs(dy) > Math.abs(dx)) return;
+    // Ignore taps and short movements — must be a deliberate swipe
     if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+    // Ignore if the touch target is a card (card handles its own interaction)
+    if (e.target.closest('.formula-card')) return;
 
     if (dx < 0) navigateToSection(AppState, AppState.currentSection + 1);
     else        navigateToSection(AppState, AppState.currentSection - 1);
