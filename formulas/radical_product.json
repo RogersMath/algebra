@@ -1,0 +1,82 @@
+{
+  "id": "radical_product",
+  "title": "Radical Product Rule",
+  "latex": "\\sqrt{ab} = \\sqrt{a} \\cdot \\sqrt{b}",
+  "aria_label": "the square root of a times b equals the square root of a, times the square root of b",
+  "difficulty": 2,
+  "sequence": 15,
+  "notes": [
+    "The square root of a product equals the product of the individual square roots.",
+    "Use this to simplify radicals by factoring out perfect squares.",
+    "Also works in reverse — you can combine two radicals into one: √3 · √5 = √15.",
+    "Requires a ≥ 0 and b ≥ 0 when working in real numbers.",
+    "Common application: √50 = √(25 · 2) = √25 · √2 = 5√2."
+  ],
+  "examples": [
+    {
+      "description": "Simplify √72.",
+      "latex": "\\sqrt{72} = \\sqrt{36 \\cdot 2} = \\sqrt{36} \\cdot \\sqrt{2} = 6\\sqrt{2}"
+    },
+    {
+      "description": "Multiply √3 · √12.",
+      "latex": "\\sqrt{3} \\cdot \\sqrt{12} = \\sqrt{36} = 6"
+    }
+  ],
+  "applications": [
+    "Simplifying radical expressions to simplest form.",
+    "Rationalizing denominators in fractions.",
+    "Combining and comparing radical expressions."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "fractional_exponent", "relationship": "equivalent_form" },
+    { "id": "product_rule", "relationship": "parallel_rule" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/v/powers-of-products-and-quotients-integer-exponents",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/v/powers-of-products-and-quotients-integer-exponents",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Regla del Producto de Radicales",
+      "notes": [
+        "La raíz cuadrada de un producto es igual al producto de las raíces cuadradas individuales.",
+        "Úsala para simplificar radicales factorizando cuadrados perfectos.",
+        "También funciona al revés — puedes combinar dos radicales: √3 · √5 = √15.",
+        "Requiere a ≥ 0 y b ≥ 0 al trabajar con números reales.",
+        "Aplicación común: √50 = √(25 · 2) = 5√2."
+      ],
+      "examples": [
+        {
+          "description": "Simplifica √72.",
+          "latex": "6\\sqrt{2}"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Règ Pwodwi Radikal",
+      "notes": [
+        "Rasin kare yon pwodwi egal pwodwi rasin kare endividyèl yo.",
+        "Itilize sa pou simplifye radikal yo pa faktorizasyon kare pafè.",
+        "Tou fonksyone an revè — ou ka konbine de radikal: √3 · √5 = √15.",
+        "Mande a ≥ 0 ak b ≥ 0 lè w travay nan nimewo reyèl.",
+        "Aplikasyon komen: √50 = 5√2."
+      ],
+      "examples": [
+        {
+          "description": "Simplifye √72.",
+          "latex": "6\\sqrt{2}"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

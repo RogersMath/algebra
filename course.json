@@ -1,0 +1,110 @@
+{
+  "course": "MAT1033C",
+  "title": "Intermediate Algebra — SLC Survival Guide",
+  "version": "1.1.0",
+  "language": "en",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "license": "MIT",
+    "granted": "2026-03-30"
+  },
+  "description": "A structured, accessible, multilingual-ready algebra reference for MAT1033C learners, featuring formulas, notes, examples, prerequisite-linked concepts, and curated video resources.",
+  "sections": [
+    {
+      "id": "linear",
+      "title": "Linear Equations & Coordinate Geometry",
+      "translations": {
+        "es": { "title": "Ecuaciones Lineales y Geometría Coordinada" },
+        "ht": { "title": "Ekwasyon Lineya ak Jewometri Kowòdone" }
+      },
+      "formulas": [
+        "slope",
+        "point_slope",
+        "slope_intercept",
+        "midpoint",
+        "distance"
+      ]
+    },
+    {
+      "id": "quadratics",
+      "title": "Quadratic Functions",
+      "translations": {
+        "es": { "title": "Funciones Cuadráticas" },
+        "ht": { "title": "Fonksyon Kwadratik" }
+      },
+      "formulas": [
+        "standard_form",
+        "vertex_form",
+        "factored_form",
+        "quadratic_formula",
+        "discriminant",
+        "axis_of_symmetry"
+      ]
+    },
+    {
+      "id": "exponents",
+      "title": "Exponents & Radicals",
+      "translations": {
+        "es": { "title": "Exponentes y Radicales" },
+        "ht": { "title": "Ekspozán ak Radikal" }
+      },
+      "formulas": [
+        "product_rule",
+        "quotient_rule",
+        "power_rule",
+        "radical_product",
+        "fractional_exponent"
+      ]
+    },
+    {
+      "id": "polynomials",
+      "title": "Polynomial Factoring",
+      "translations": {
+        "es": { "title": "Factorización de Polinomios" },
+        "ht": { "title": "Faktorizasyon Polinòm" }
+      },
+      "formulas": [
+        "difference_of_squares",
+        "sum_of_cubes",
+        "difference_of_cubes"
+      ]
+    },
+    {
+      "id": "functions",
+      "title": "Functions & Rates",
+      "translations": {
+        "es": { "title": "Funciones y Tasas" },
+        "ht": { "title": "Fonksyon ak Vitès" }
+      },
+      "formulas": [
+        "average_rate_of_change"
+      ]
+    }
+  ],
+  "globalFormulas": false,
+  "ui": {
+    "cta": {
+      "en": "Want tutors to help you perform at your very best? PBSC students click here.",
+      "es": "¿Quieres tutores que te ayuden a rendir al máximo? Estudiantes de PBSC, haz clic aquí.",
+      "ht": "Vle tutè pou ede w reyalize pi bon ou? Etidyan PBSC klike isit la."
+    },
+    "cta_url": "https://pbsc.edu/slc/"
+  },
+  "notes": {
+    "multilingual_ready": true,
+    "internationalization": ["en", "es", "ht"],
+    "pwa_ready": true,
+    "graph_enabled": true,
+    "ui_features": [
+      "treasure_reveal",
+      "swipe_navigation",
+      "slide_left_detail_page",
+      "lazy_loading",
+      "hash_routing",
+      "dot_navigation",
+      "keyboard_navigation",
+      "wcag_aa"
+    ]
+  }
+}

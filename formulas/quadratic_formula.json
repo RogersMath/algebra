@@ -1,0 +1,86 @@
+{
+  "id": "quadratic_formula",
+  "title": "Quadratic Formula",
+  "latex": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+  "aria_label": "x equals negative b, plus or minus the square root of, b squared minus 4 a c, all divided by 2 a",
+  "difficulty": 3,
+  "sequence": 9,
+  "notes": [
+    "The quadratic formula solves any quadratic equation in standard form ax² + bx + c = 0.",
+    "The ± means there are potentially two solutions — one with + and one with −.",
+    "Always identify a, b, and c carefully before substituting. Watch signs.",
+    "The expression under the radical, b² − 4ac, is the discriminant. It tells you how many real solutions exist.",
+    "If the discriminant is negative, there are no real solutions (the parabola doesn't cross the x-axis)."
+  ],
+  "examples": [
+    {
+      "description": "Solve x² − 5x + 6 = 0 using the quadratic formula.",
+      "latex": "x = \\frac{5 \\pm \\sqrt{25 - 24}}{2} = \\frac{5 \\pm 1}{2} \\quad\\Rightarrow\\quad x = 3 \\text{ or } x = 2"
+    },
+    {
+      "description": "Solve 2x² + 3x − 2 = 0.",
+      "latex": "x = \\frac{-3 \\pm \\sqrt{9 + 16}}{4} = \\frac{-3 \\pm 5}{4} \\quad\\Rightarrow\\quad x = \\tfrac{1}{2} \\text{ or } x = -2"
+    }
+  ],
+  "applications": [
+    "Solving any quadratic equation when factoring is not obvious or possible.",
+    "Finding the x-intercepts of any parabola.",
+    "Calculating time values in physics problems involving height and gravity."
+  ],
+  "prerequisites": [
+    { "id": "standard_form", "strength": "required" },
+    { "id": "discriminant", "strength": "recommended" }
+  ],
+  "related": [
+    { "id": "standard_form", "relationship": "application" },
+    { "id": "discriminant", "relationship": "contains" },
+    { "id": "factored_form", "relationship": "alternative_method" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/using-the-quadratic-formula",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Fórmula Cuadrática",
+      "notes": [
+        "La fórmula cuadrática resuelve cualquier ecuación cuadrática en forma estándar ax² + bx + c = 0.",
+        "El ± significa que hay potencialmente dos soluciones — una con + y otra con −.",
+        "Siempre identifica a, b y c con cuidado antes de sustituir. Vigila los signos.",
+        "La expresión bajo el radical, b² − 4ac, es el discriminante. Indica cuántas soluciones reales existen.",
+        "Si el discriminante es negativo, no hay soluciones reales."
+      ],
+      "examples": [
+        {
+          "description": "Resuelve x² − 5x + 6 = 0 usando la fórmula cuadrática.",
+          "latex": "x = \\frac{5 \\pm \\sqrt{25 - 24}}{2} = \\frac{5 \\pm 1}{2} \\quad\\Rightarrow\\quad x = 3 \\text{ o } x = 2"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòmil Kwadratik",
+      "notes": [
+        "Fòmil kwadratik la rezoud nenpòt ekwasyon kwadratik nan fòm estanda ax² + bx + c = 0.",
+        "± vle di gen potansyèlman de solisyon — youn ak + ak youn ak −.",
+        "Toujou idantifye a, b, ak c avèk anpil swen anvan ou substitye. Veye siy yo.",
+        "Ekspresyon anba radikal la, b² − 4ac, se diskriminan an. Li di ou konbyen solisyon reyèl ki egziste.",
+        "Si diskriminan an negatif, pa gen solisyon reyèl."
+      ],
+      "examples": [
+        {
+          "description": "Rezoud x² − 5x + 6 = 0 lè w itilize fòmil kwadratik la.",
+          "latex": "x = 3 \\text{ oswa } x = 2"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "point_slope",
+  "title": "Point–Slope Form",
+  "latex": "y - y_1 = m(x - x_1)",
+  "aria_label": "y minus y-sub-1 equals m times, open parenthesis, x minus x-sub-1, close parenthesis",
+  "difficulty": 2,
+  "sequence": 2,
+  "notes": [
+    "Use point–slope form when you know a point on the line and its slope.",
+    "(x₁, y₁) is any known point on the line; m is the slope.",
+    "This form is especially useful when writing the equation of a line from two points.",
+    "You can convert to slope–intercept form by distributing and solving for y.",
+    "Either of the two given points can serve as (x₁, y₁) — both give the same line."
+  ],
+  "examples": [
+    {
+      "description": "Write the equation of a line with slope 3 through (2, 5).",
+      "latex": "y - 5 = 3(x - 2)"
+    },
+    {
+      "description": "Write the equation through (−1, 4) and (3, −2). First find slope, then apply form.",
+      "latex": "m = \\frac{-2-4}{3-(-1)} = \\frac{-6}{4} = -\\frac{3}{2} \\quad\\Rightarrow\\quad y - 4 = -\\frac{3}{2}(x + 1)"
+    }
+  ],
+  "applications": [
+    "Writing the equation of a tangent line in calculus preparation.",
+    "Modeling any linear situation when you have a known data point and a rate of change.",
+    "Converting between forms of linear equations."
+  ],
+  "prerequisites": [
+    { "id": "slope", "strength": "required" }
+  ],
+  "related": [
+    { "id": "slope", "relationship": "prerequisite" },
+    { "id": "slope_intercept", "relationship": "equivalent_form" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:forms-of-linear-equations/x2f8bb11595b61c86:point-slope-form/v/point-slope-and-slope-intercept-form-from-two-points",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:forms-of-linear-equations/x2f8bb11595b61c86:point-slope-form/v/point-slope-and-slope-intercept-form-from-two-points",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Forma Punto-Pendiente",
+      "notes": [
+        "Usa la forma punto-pendiente cuando conoces un punto en la línea y su pendiente.",
+        "(x₁, y₁) es cualquier punto conocido sobre la línea; m es la pendiente.",
+        "Esta forma es útil cuando escribes la ecuación de una línea a partir de dos puntos.",
+        "Puedes convertir a la forma pendiente-intercepto distribuyendo y despejando y.",
+        "Cualquiera de los dos puntos dados puede servir como (x₁, y₁)."
+      ],
+      "examples": [
+        {
+          "description": "Escribe la ecuación de una línea con pendiente 3 que pasa por (2, 5).",
+          "latex": "y - 5 = 3(x - 2)"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòm Pwen-Pant",
+      "notes": [
+        "Itilize fòm pwen-pant lè ou konnen yon pwen sou liy la ak pant li.",
+        "(x₁, y₁) se nenpòt pwen ou konnen sou liy la; m se pant la.",
+        "Fòm sa a trè itil lè ou ekri ekwasyon yon liy pati de de pwen.",
+        "Ou ka konvèti an fòm pant-entèsèpsyon pa distribye epi rezoud pou y.",
+        "Nenpòt nan de pwen yo ka sèvi kòm (x₁, y₁)."
+      ],
+      "examples": [
+        {
+          "description": "Ekri ekwasyon yon liy ak pant 3 ki pase nan (2, 5).",
+          "latex": "y - 5 = 3(x - 2)"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

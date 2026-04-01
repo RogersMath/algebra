@@ -1,0 +1,84 @@
+{
+  "id": "average_rate_of_change",
+  "title": "Average Rate of Change",
+  "latex": "\\frac{f(b) - f(a)}{b - a}",
+  "aria_label": "f of b minus f of a, divided by b minus a",
+  "difficulty": 2,
+  "sequence": 20,
+  "notes": [
+    "The average rate of change measures how much a function's output changes per unit of input over an interval.",
+    "It is the slope of the secant line connecting the two points (a, f(a)) and (b, f(b)) on the graph.",
+    "For a linear function, the average rate of change is always equal to the slope m.",
+    "For a nonlinear function (like a parabola), the rate of change varies — this formula gives the average over [a, b].",
+    "This formula is the foundation of differential calculus — the derivative is the limit of the average rate of change as the interval shrinks to zero."
+  ],
+  "examples": [
+    {
+      "description": "Find the average rate of change of f(x) = x² on [1, 4].",
+      "latex": "\\frac{f(4) - f(1)}{4 - 1} = \\frac{16 - 1}{3} = \\frac{15}{3} = 5"
+    },
+    {
+      "description": "Find the average rate of change of f(x) = 2x + 3 on [0, 5].",
+      "latex": "\\frac{f(5) - f(0)}{5 - 0} = \\frac{13 - 3}{5} = \\frac{10}{5} = 2"
+    }
+  ],
+  "applications": [
+    "Calculating average speed, average velocity, or average acceleration over a time interval.",
+    "Comparing growth rates of different functions over the same interval.",
+    "Approximating instantaneous rates of change — the gateway concept to calculus."
+  ],
+  "prerequisites": [
+    { "id": "slope", "strength": "required" }
+  ],
+  "related": [
+    { "id": "slope", "relationship": "generalization" },
+    { "id": "slope_intercept", "relationship": "special_case" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:average-rate-of-change/v/introduction-to-average-rate-of-change",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:average-rate-of-change/v/introduction-to-average-rate-of-change",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Tasa Promedio de Cambio",
+      "notes": [
+        "La tasa promedio de cambio mide cuánto cambia la salida de una función por unidad de entrada en un intervalo.",
+        "Es la pendiente de la secante que conecta los puntos (a, f(a)) y (b, f(b)) en la gráfica.",
+        "Para una función lineal, la tasa promedio de cambio siempre es igual a la pendiente m.",
+        "Para una función no lineal (como una parábola), la tasa varía — esta fórmula da el promedio en [a, b].",
+        "Esta fórmula es la base del cálculo diferencial — la derivada es el límite de la tasa promedio cuando el intervalo tiende a cero."
+      ],
+      "examples": [
+        {
+          "description": "Encuentra la tasa promedio de cambio de f(x) = x² en [1, 4].",
+          "latex": "\\frac{16 - 1}{4 - 1} = 5"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Vitès Chanjman Mwayèn",
+      "notes": [
+        "Vitès chanjman mwayèn mezire konbyen sorèt yon fonksyon chanje pa inite antre sou yon entèval.",
+        "Li se pant liy sekan ki konekte pwen (a, f(a)) ak (b, f(b)) sou grafik la.",
+        "Pou yon fonksyon lineyè, vitès chanjman mwayèn toujou egal pant m nan.",
+        "Pou yon fonksyon ki pa lineyè (tankou yon parabòl), vitès la varye — fòmil sa a bay mwayèn sou [a, b].",
+        "Fòmil sa a se baz kalkil diferansyèl — derivatif la se limit vitès chanjman mwayèn lè entèval la vin zewo."
+      ],
+      "examples": [
+        {
+          "description": "Jwenn vitès chanjman mwayèn f(x) = x² sou [1, 4].",
+          "latex": "\\frac{16 - 1}{4 - 1} = 5"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

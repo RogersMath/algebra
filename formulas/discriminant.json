@@ -1,0 +1,84 @@
+{
+  "id": "discriminant",
+  "title": "Discriminant",
+  "latex": "D = b^2 - 4ac",
+  "aria_label": "D equals b squared minus 4 times a times c",
+  "difficulty": 2,
+  "sequence": 10,
+  "notes": [
+    "The discriminant is the expression inside the square root of the quadratic formula.",
+    "If D > 0: two distinct real solutions (the parabola crosses the x-axis twice).",
+    "If D = 0: exactly one real solution, a repeated root (the parabola touches the x-axis once).",
+    "If D < 0: no real solutions (the parabola does not cross the x-axis).",
+    "You can classify the number of solutions before solving — saving time on exams."
+  ],
+  "examples": [
+    {
+      "description": "How many real solutions does 2x² − 4x + 2 = 0 have?",
+      "latex": "D = (-4)^2 - 4(2)(2) = 16 - 16 = 0 \\quad\\Rightarrow\\quad \\text{one repeated solution}"
+    },
+    {
+      "description": "How many real solutions does x² + x + 1 = 0 have?",
+      "latex": "D = 1^2 - 4(1)(1) = 1 - 4 = -3 \\quad\\Rightarrow\\quad \\text{no real solutions}"
+    }
+  ],
+  "applications": [
+    "Quickly determining whether a quadratic is solvable by real methods before attempting to solve.",
+    "Predicting whether a projectile reaches a given height.",
+    "Analyzing whether two curves intersect in algebra and calculus."
+  ],
+  "prerequisites": [
+    { "id": "standard_form", "strength": "required" }
+  ],
+  "related": [
+    { "id": "quadratic_formula", "relationship": "contained_in" },
+    { "id": "standard_form", "relationship": "derived_from" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/quadratic-formula-3",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-formula-a1/v/quadratic-formula-3",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Discriminante",
+      "notes": [
+        "El discriminante es la expresión dentro de la raíz cuadrada de la fórmula cuadrática.",
+        "Si D > 0: dos soluciones reales distintas (la parábola cruza el eje x dos veces).",
+        "Si D = 0: exactamente una solución real, una raíz repetida (la parábola toca el eje x una vez).",
+        "Si D < 0: no hay soluciones reales (la parábola no cruza el eje x).",
+        "Puedes clasificar el número de soluciones antes de resolver — ahorrando tiempo en exámenes."
+      ],
+      "examples": [
+        {
+          "description": "¿Cuántas soluciones reales tiene 2x² − 4x + 2 = 0?",
+          "latex": "D = 0 \\quad\\Rightarrow\\quad \\text{una solución repetida}"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Diskriminan",
+      "notes": [
+        "Diskriminan an se ekspresyon andedan rasin kare fòmil kwadratik la.",
+        "Si D > 0: de solisyon reyèl distink (parabòl la travèse aks x de fwa).",
+        "Si D = 0: egzakteman yon solisyon reyèl, yon rasin repete (parabòl la touche aks x yon fwa).",
+        "Si D < 0: pa gen solisyon reyèl (parabòl la pa travèse aks x).",
+        "Ou ka klase kantite solisyon anvan rezoud — ekonomize tan nan egzamen."
+      ],
+      "examples": [
+        {
+          "description": "Konbyen solisyon reyèl 2x² − 4x + 2 = 0 genyen?",
+          "latex": "D = 0 \\quad\\Rightarrow\\quad \\text{yon solisyon repete}"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

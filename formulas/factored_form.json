@@ -1,0 +1,86 @@
+{
+  "id": "factored_form",
+  "title": "Factored Form",
+  "latex": "y = a(x - r_1)(x - r_2)",
+  "aria_label": "y equals a times, open parenthesis, x minus r-sub-1, close parenthesis, times, open parenthesis, x minus r-sub-2, close parenthesis",
+  "difficulty": 3,
+  "sequence": 8,
+  "notes": [
+    "Factored form reveals the zeros (x-intercepts) of the parabola directly: they are r₁ and r₂.",
+    "Set each factor equal to zero to find the roots: x − r₁ = 0 gives x = r₁.",
+    "The axis of symmetry is the average of the two roots: x = (r₁ + r₂) / 2.",
+    "If a quadratic cannot be factored over integers, use the quadratic formula instead.",
+    "a is the same leading coefficient as in standard and vertex form."
+  ],
+  "examples": [
+    {
+      "description": "Identify the zeros of y = 2(x − 3)(x + 1).",
+      "latex": "x - 3 = 0 \\Rightarrow x = 3 \\qquad x + 1 = 0 \\Rightarrow x = -1"
+    },
+    {
+      "description": "Factor y = x² − 5x + 6 into factored form.",
+      "latex": "y = (x - 2)(x - 3) \\quad \\Rightarrow \\quad r_1 = 2, \\; r_2 = 3"
+    }
+  ],
+  "applications": [
+    "Finding where a projectile lands (when height = 0).",
+    "Determining break-even points in revenue/cost models.",
+    "Solving quadratic equations by setting y = 0 and reading off roots."
+  ],
+  "prerequisites": [
+    { "id": "standard_form", "strength": "required" }
+  ],
+  "related": [
+    { "id": "standard_form", "relationship": "equivalent_form" },
+    { "id": "vertex_form", "relationship": "equivalent_form" },
+    { "id": "quadratic_formula", "relationship": "alternative_method" },
+    { "id": "difference_of_squares", "relationship": "special_case" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Forma Factorizada",
+      "notes": [
+        "La forma factorizada revela directamente los ceros (interceptos en x) de la parábola: son r₁ y r₂.",
+        "Iguala cada factor a cero para encontrar las raíces: x − r₁ = 0 da x = r₁.",
+        "El eje de simetría es el promedio de las dos raíces: x = (r₁ + r₂) / 2.",
+        "Si un cuadrático no se puede factorizar en enteros, usa la fórmula cuadrática.",
+        "a es el mismo coeficiente principal que en la forma estándar y la forma vértice."
+      ],
+      "examples": [
+        {
+          "description": "Identifica los ceros de y = 2(x − 3)(x + 1).",
+          "latex": "x = 3, \\quad x = -1"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòm Faktorizasyon",
+      "notes": [
+        "Fòm faktorizasyon montre zewo (entèsèpsyon-x) parabòl la dirèkteman: yo se r₁ ak r₂.",
+        "Mete chak faktè egal a zewo pou jwenn rasin yo: x − r₁ = 0 bay x = r₁.",
+        "Aks simetri a se mwayèn de rasin yo: x = (r₁ + r₂) / 2.",
+        "Si yon kwadratik pa ka faktorizasyon sou antye, itilize fòmil kwadratik la.",
+        "a se menm koefisyan prensip nan fòm estanda ak fòm vèrtèks."
+      ],
+      "examples": [
+        {
+          "description": "Idantifye zewo y = 2(x − 3)(x + 1).",
+          "latex": "x = 3, \\quad x = -1"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}
