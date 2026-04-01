@@ -2,9 +2,11 @@
  * ui/gestures.js
  * MAT1033C SLC Survival Guide
  * Touch gesture handling:
- *   - Swipe left/right on main content → section navigation
- *   - Swipe right on detail panel      → close detail
- *   - Drag on formula card             → reveal gold layer, trigger open at threshold
+ *   - Swipe left/right anywhere → section navigation (highest priority)
+ *   - Swipe right on detail panel → close detail
+ *
+ * Swipe takes priority over card taps. Cards only open when finger
+ * movement is below the tap threshold (handled in render.js wireCards).
  *
  * @author Jesse Rogers
  * @institution Palm Beach State College
@@ -12,11 +14,10 @@
  */
 
 import { navigateToSection } from './render.js';
-import { openDetail, closeDetail } from './detail.js';
+import { closeDetail }       from './detail.js';
+import { clearGlow }         from './render.js';
 
-const SWIPE_THRESHOLD  = 50;   // px — minimum horizontal swipe distance
-const DRAG_OPEN_THRESHOLD = 80; // px — card drag distance to trigger open
-const DRAG_GOLD_START  = 10;   // px — drag distance before gold layer appears
+const SWIPE_THRESHOLD = 50; // px — minimum horizontal travel to count as swipe
 
 /**
  * initGestures — attach all touch handlers.
@@ -25,22 +26,17 @@ const DRAG_GOLD_START  = 10;   // px — drag distance before gold layer appears
 export function initGestures(AppState) {
   initSectionSwipe(AppState);
   initDetailSwipe(AppState);
-  // Card drag is wired per-card in render.js wireCards()
-  // but the drag logic itself lives here as an exported helper.
 }
 
 // ─── SECTION SWIPE ────────────────────────────────────────────────────────────
 
 function initSectionSwipe(AppState) {
-  const main = document.getElementById('mainContent');
-  if (!main) return;
-
-  let startX = 0;
-  let startY = 0;
+  let startX   = 0;
+  let startY   = 0;
   let tracking = false;
 
+  // Record start position on any touch — including over cards
   document.addEventListener('touchstart', e => {
-    // Don't intercept if detail panel is open or touch is inside it
     if (AppState.detailOpen) return;
     if (e.target.closest('.formula-detail')) return;
     startX   = e.touches[0].clientX;
@@ -55,13 +51,13 @@ function initSectionSwipe(AppState) {
     const dx = e.changedTouches[0].clientX - startX;
     const dy = e.changedTouches[0].clientY - startY;
 
-    // Ignore vertical-dominant swipes (scrolling)
+    // Must be horizontal-dominant
     if (Math.abs(dy) > Math.abs(dx)) return;
-    // Ignore taps and short movements — must be a deliberate swipe
+    // Must exceed swipe threshold
     if (Math.abs(dx) < SWIPE_THRESHOLD) return;
-    // Ignore if the touch target is a card (card handles its own interaction)
-    if (e.target.closest('.formula-card')) return;
 
+    // It's a swipe — clear any card glow and navigate
+    clearGlow(AppState);
     if (dx < 0) navigateToSection(AppState, AppState.currentSection + 1);
     else        navigateToSection(AppState, AppState.currentSection - 1);
   }, { passive: true });
@@ -84,58 +80,4 @@ function initDetailSwipe(AppState) {
     const dx = e.changedTouches[0].clientX - startX;
     if (dx > SWIPE_THRESHOLD) closeDetail(AppState);
   }, { passive: true });
-}
-
-// ─── CARD DRAG-TO-REVEAL ──────────────────────────────────────────────────────
-
-/**
- * attachCardDrag — called by render.js wireCards() for each formula card.
- * Animates the gold layer on horizontal drag and opens detail at threshold.
- *
- * @param {HTMLElement} card
- * @param {string}      id       formula id
- * @param {Object}      AppState
- */
-export function attachCardDrag(card, id, AppState) {
-  const goldLayer = card.querySelector('.card-gold-layer');
-  if (!goldLayer) return;
-
-  let startX  = 0;
-  let dragging = false;
-
-  card.addEventListener('touchstart', e => {
-    startX   = e.touches[0].clientX;
-    dragging = false;
-  }, { passive: true });
-
-  card.addEventListener('touchmove', e => {
-    const dx = e.touches[0].clientX - startX;
-    if (dx < DRAG_GOLD_START) return;
-
-    dragging = true;
-    // Clamp progress 0–1
-    const progress = Math.min(dx / DRAG_OPEN_THRESHOLD, 1);
-    goldLayer.style.opacity = progress;
-    goldLayer.style.transform = `scaleX(${progress})`;
-    card.classList.add('dragging');
-  }, { passive: true });
-
-  card.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - startX;
-    resetCardDrag(card, goldLayer);
-
-    if (dragging && dx >= DRAG_OPEN_THRESHOLD) {
-      openDetail(AppState, id);
-    }
-  }, { passive: true });
-
-  card.addEventListener('touchcancel', () => {
-    resetCardDrag(card, goldLayer);
-  }, { passive: true });
-}
-
-function resetCardDrag(card, goldLayer) {
-  card.classList.remove('dragging');
-  goldLayer.style.opacity   = '';
-  goldLayer.style.transform = '';
 }
