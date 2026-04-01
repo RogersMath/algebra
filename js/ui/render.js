@@ -144,8 +144,12 @@ function wireCards(container, AppState) {
   container.querySelectorAll('.formula-card').forEach(card => {
     const id = card.dataset.id;
 
-    // Click / Enter → open detail
-    card.addEventListener('click',   () => openDetail(AppState, id));
+    // Desktop: hover → glow, click → open
+    card.addEventListener('mouseenter', () => card.classList.add('glowing'));
+    card.addEventListener('mouseleave', () => card.classList.remove('glowing'));
+    card.addEventListener('click', () => openDetail(AppState, id));
+
+    // Keyboard: Enter or Space → open
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -153,27 +157,11 @@ function wireCards(container, AppState) {
       }
     });
 
-    // Desktop hover → glow state
-    card.addEventListener('mouseenter', () => card.classList.add('glowing'));
-    card.addEventListener('mouseleave', () => card.classList.remove('glowing'));
-
-    // Mobile: first tap → glow; second tap → open
-    let tapped = false;
+    // Mobile: single tap → brief glow, then open
     card.addEventListener('touchend', e => {
-      if (!tapped) {
-        e.preventDefault();
-        card.classList.add('glowing');
-        tapped = true;
-        // Reset if user taps elsewhere
-        const reset = () => {
-          card.classList.remove('glowing');
-          tapped = false;
-          document.removeEventListener('touchstart', reset);
-        };
-        setTimeout(() => document.addEventListener('touchstart', reset, { once: true }), 50);
-      } else {
-        openDetail(AppState, id);
-      }
+      e.preventDefault(); // prevent ghost click firing the click handler too
+      card.classList.add('glowing');
+      setTimeout(() => openDetail(AppState, id), 120);
     });
   });
 }
