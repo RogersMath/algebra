@@ -93,6 +93,10 @@ function openMenu(sidemenu, overlay, hamburger) {
   sidemenu.classList.add('open');
   overlay.classList.add('active');
   hamburger.setAttribute('aria-expanded', 'true');
+  // Make background content inert (WCAG focus trap pattern)
+  document.getElementById('mainContent')?.setAttribute('inert', '');
+  document.getElementById('dotNav')?.setAttribute('inert', '');
+  document.querySelector('footer')?.setAttribute('inert', '');
   // Move focus to first menu link
   const first = sidemenu.querySelector('.menu-link');
   if (first) first.focus();
@@ -102,4 +106,8 @@ export function closeMenu(sidemenu, overlay, hamburger) {
   sidemenu.classList.remove('open');
   overlay.classList.remove('active');
   hamburger?.setAttribute('aria-expanded', 'false');
+  // Restore background content
+  document.getElementById('mainContent')?.removeAttribute('inert');
+  document.getElementById('dotNav')?.removeAttribute('inert');
+  document.querySelector('footer')?.removeAttribute('inert');
 }
