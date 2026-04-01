@@ -15,16 +15,49 @@ import { setHash }                     from '../router.js';
 import { updateActiveLink }            from './menu.js';
 import { openDetail }                  from './detail.js';
 
-const TRANSITION_MS = 220;
+/**
+ * clearGlow — remove .glowing from whichever card currently has it,
+ * and blur it so :focus-visible doesn't linger.
+ * @param {Object} AppState
+ */
+export function clearGlow(AppState) {
+  if (AppState.glowingCard) {
+    AppState.glowingCard.classList.remove('glowing');
+    AppState.glowingCard.blur();
+    AppState.glowingCard = null;
+  }
+}
+
+/**
+ * setGlow — clear any existing glow, then apply to a single card.
+ * @param {Object}      AppState
+ * @param {HTMLElement} card
+ */
+function setGlow(AppState, card) {
+  clearGlow(AppState);
+  AppState.glowingCard = card;
+  card.classList.add('glowing');
+}
 
 /**
  * initRender — build initial DOM structure and render first section.
  * @param {Object} AppState
  */
 export function initRender(AppState) {
-  buildChrome(AppState);       // dots, arrows, footer CTA
-  renderSection(AppState, 0);  // paint section 0 immediately
-  preloadSection(AppState.sections[0].formulas); // warm cache
+  // Ensure AppState has the glowingCard slot
+  AppState.glowingCard = null;
+
+  buildChrome(AppState);
+  renderSection(AppState, 0);
+  preloadSection(AppState.sections[0].formulas);
+
+  // Any tap/click on a non-card area clears glow
+  document.addEventListener('touchstart', e => {
+    if (!e.target.closest('.formula-card')) clearGlow(AppState);
+  }, { passive: true });
+  document.addEventListener('mousedown', e => {
+    if (!e.target.closest('.formula-card')) clearGlow(AppState);
+  });
 }
 
 // ─── DOM BUILDERS ─────────────────────────────────────────────────────────────
@@ -41,7 +74,7 @@ function buildDots(AppState) {
   container.innerHTML = '';
   AppState.sections.forEach((_, i) => {
     const btn = document.createElement('button');
-    btn.className  = 'dot';
+    btn.className   = 'dot';
     btn.dataset.idx = i;
     btn.setAttribute('aria-label', `Go to section ${i + 1}`);
     btn.addEventListener('click', () => navigateToSection(AppState, i));
@@ -68,31 +101,24 @@ function buildFooterCTA(AppState) {
 
 // ─── SECTION RENDERING ────────────────────────────────────────────────────────
 
-/**
- * renderSection — fetch all formula cards for a section and inject into main.
- * @param {Object} AppState
- * @param {number} idx
- */
 async function renderSection(AppState, idx) {
   const main    = document.getElementById('mainContent');
   const section = AppState.sections[idx];
   if (!main || !section) return;
 
-  // Show skeleton while loading
+  // Clear any lingering glow before re-rendering cards
+  AppState.glowingCard = null;
+
   main.innerHTML = buildSkeleton(section.formulas.length);
 
-  // Fetch all formulas (parallel, cache-aware)
   const formulas = await Promise.all(
     section.formulas.map(id => loadFormula(id))
   );
 
-  // Build section HTML
   main.innerHTML = buildSectionHTML(section, formulas, AppState.lang);
 
-  // Wire card interactions
   wireCards(main, AppState);
 
-  // Trigger MathJax render if available
   if (window.MathJax?.typesetPromise) {
     await window.MathJax.typesetPromise([main]);
   }
@@ -111,7 +137,6 @@ function buildSectionHTML(section, formulas, lang) {
 
 function buildCardHTML(formula, lang) {
   const title = t(formula, 'title', lang);
-  // aria-label uses the plain-English description for screen readers
   return `
     <div class="formula-card"
          role="listitem"
@@ -144,12 +169,20 @@ function wireCards(container, AppState) {
   container.querySelectorAll('.formula-card').forEach(card => {
     const id = card.dataset.id;
 
-    // Desktop: hover → glow, click → open
-    card.addEventListener('mouseenter', () => card.classList.add('glowing'));
-    card.addEventListener('mouseleave', () => card.classList.remove('glowing'));
-    card.addEventListener('click', () => openDetail(AppState, id));
+    // ── DESKTOP ──────────────────────────────────────────────────
+    // Hover: glow while mouse is over card
+    card.addEventListener('mouseenter', () => setGlow(AppState, card));
+    card.addEventListener('mouseleave', () => clearGlow(AppState));
+    // Click: open detail (mouse users — no touch involved)
+    card.addEventListener('click', e => {
+      if (e.detail === 0) return; // keyboard-triggered click, handled by keydown
+      openDetail(AppState, id);
+    });
 
-    // Keyboard: Enter or Space → open
+    // ── KEYBOARD ─────────────────────────────────────────────────
+    // Tab focus: glow the focused card, clear all others
+    card.addEventListener('focus', () => setGlow(AppState, card));
+    card.addEventListener('blur',  () => clearGlow(AppState));
     card.addEventListener('keydown', e => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -157,10 +190,25 @@ function wireCards(container, AppState) {
       }
     });
 
-    // Mobile: single tap → brief glow, then open
+    // ── MOBILE ───────────────────────────────────────────────────
+    // touchstart: record position for swipe detection
+    let touchStartX = 0;
+    let touchStartY = 0;
+    card.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }, { passive: true });
+
+    // touchend: only open if finger didn't travel — yield to swipe otherwise
     card.addEventListener('touchend', e => {
-      e.preventDefault(); // prevent ghost click firing the click handler too
-      card.classList.add('glowing');
+      const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+
+      // If finger moved more than 10px in any direction, treat as scroll/swipe — don't open
+      if (dx > 10 || dy > 10) return;
+
+      e.preventDefault(); // suppress ghost click
+      setGlow(AppState, card);
       setTimeout(() => openDetail(AppState, id), 120);
     });
   });
@@ -168,18 +216,12 @@ function wireCards(container, AppState) {
 
 // ─── NAVIGATION ───────────────────────────────────────────────────────────────
 
-/**
- * navigateToSection — transition to a new section with direction-aware animation.
- * Exported so router.js, menu.js, and gestures.js can call it.
- * @param {Object}  AppState
- * @param {number}  idx
- * @param {boolean} updateHash  default true
- */
 export async function navigateToSection(AppState, idx, updateHash = true) {
   const total = AppState.sections.length;
   if (idx < 0 || idx >= total || idx === AppState.currentSection) return;
 
-  const prev = AppState.currentSection;
+  clearGlow(AppState); // clear focus state on section change
+
   AppState.currentSection = idx;
 
   updateDots(total, idx);
@@ -189,7 +231,6 @@ export async function navigateToSection(AppState, idx, updateHash = true) {
 
   await renderSection(AppState, idx);
 
-  // Preload adjacent sections for instant response
   const next = AppState.sections[idx + 1];
   const back = AppState.sections[idx - 1];
   if (next) preloadSection(next.formulas);
