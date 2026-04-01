@@ -71,6 +71,9 @@ function buildMenuLinks(sidemenu, AppState) {
 
   // Language switcher below section links
   buildLangSwitcher(sidemenu, AppState);
+
+  // Install prompt below language switcher
+  buildInstallPrompt(sidemenu);
 }
 
 /**
@@ -136,6 +139,72 @@ export function updateActiveLink(sidemenu, idx) {
     a.classList.toggle('active', i === idx);
     a.setAttribute('aria-current', i === idx ? 'page' : 'false');
   });
+}
+
+/**
+ * buildInstallPrompt — inject an install button for Android/Chrome
+ * and iOS instructions for Safari. Hidden until relevant.
+ * @param {HTMLElement} sidemenu
+ */
+function buildInstallPrompt(sidemenu) {
+  // ── Android / Chrome: beforeinstallprompt flow ──────────────────
+  let deferredPrompt = null;
+
+  const divider = document.createElement('div');
+  divider.className = 'menu-divider';
+  divider.setAttribute('aria-hidden', 'true');
+
+  const installBtn = document.createElement('button');
+  installBtn.className = 'menu-install-btn';
+  installBtn.setAttribute('hidden', '');
+  installBtn.setAttribute('aria-label', 'Install this app on your device');
+  installBtn.innerHTML = '⬇ Install App';
+
+  // ── iOS Safari: manual instructions ─────────────────────────────
+  const iosHint = document.createElement('div');
+  iosHint.className = 'menu-ios-hint';
+  iosHint.setAttribute('hidden', '');
+  iosHint.innerHTML = `
+    <span class="ios-hint-icon">📲</span>
+    <span>To install: tap <strong>Share</strong> then<br><strong>Add to Home Screen</strong></span>
+  `;
+
+  // Detect iOS Safari (no beforeinstallprompt support)
+  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+  const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches
+    || window.navigator.standalone === true;
+
+  if (isIOS && !isInStandaloneMode) {
+    iosHint.removeAttribute('hidden');
+  }
+
+  // Listen for Chrome/Android installability signal
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.removeAttribute('hidden');
+  });
+
+  // Fire the prompt on button click
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    await deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      installBtn.setAttribute('hidden', '');
+    }
+    deferredPrompt = null;
+  });
+
+  // Hide button if already installed
+  window.addEventListener('appinstalled', () => {
+    installBtn.setAttribute('hidden', '');
+    deferredPrompt = null;
+  });
+
+  sidemenu.appendChild(divider);
+  sidemenu.appendChild(installBtn);
+  sidemenu.appendChild(iosHint);
 }
 
 function toggleMenu(sidemenu, overlay, hamburger) {

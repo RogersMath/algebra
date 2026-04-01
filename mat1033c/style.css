@@ -582,6 +582,124 @@ footer a:hover { color: var(--gold-bright); }
   letter-spacing: 0.1em;
 }
 
+
+/* ── LANGUAGE SWITCHER (drawer) ─────────────────────────────── */
+.menu-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.12);
+  margin: 0.5rem 0;
+}
+
+.lang-switcher {
+  padding: 0.9rem 1.5rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lang-label {
+  font-family: "Cinzel", serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  cursor: default;
+}
+
+.lang-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: var(--cream);
+  font-family: "Cinzel", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  padding: 0.55rem 2.2rem 0.55rem 0.85rem;
+  cursor: pointer;
+  width: 100%;
+  /* Custom chevron */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FFF8E7' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.lang-select:hover {
+  border-color: var(--gold);
+  background-color: rgba(255,255,255,0.13);
+}
+
+.lang-select:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+/* Active option gold treatment — supported in most browsers for select */
+.lang-select option[selected],
+.lang-select option:checked {
+  font-weight: 700;
+  color: var(--gold);
+  background: var(--navy1);
+}
+
+.lang-select option {
+  background: var(--navy1);
+  color: var(--cream);
+  font-family: serif;
+}
+
+/* ── INSTALL PROMPT (drawer) ────────────────────────────────── */
+.menu-install-btn {
+  display: block;
+  width: calc(100% - 3rem);
+  margin: 0.5rem 1.5rem 0.25rem;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, var(--gold), #a87820);
+  color: var(--navy1);
+  border: none;
+  border-radius: 8px;
+  font-family: "Cinzel", serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.menu-install-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.menu-install-btn:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+.menu-ios-hint {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 0.5rem 1.5rem 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.8);
+  font-family: "Playfair Display", serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.ios-hint-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.menu-ios-hint strong {
+  color: var(--cream);
+}
 /* ── PRINT ──────────────────────────────────────────────────── */
 @media print {
   header, footer, #dotNav, .arrow-btn, .side-menu,
