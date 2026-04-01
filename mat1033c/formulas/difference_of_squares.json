@@ -1,0 +1,83 @@
+{
+  "id": "difference_of_squares",
+  "title": "Difference of Squares",
+  "latex": "a^2 - b^2 = (a - b)(a + b)",
+  "aria_label": "a squared minus b squared equals, open parenthesis, a minus b, close parenthesis, times, open parenthesis, a plus b, close parenthesis",
+  "difficulty": 2,
+  "sequence": 17,
+  "notes": [
+    "This pattern only works for subtraction — a sum of squares (a² + b²) does not factor over the reals.",
+    "Both terms must be perfect squares: look for squared variables or perfect square coefficients.",
+    "The two factors are conjugates: one has a plus, the other has a minus.",
+    "When multiplied back out, the middle terms cancel, leaving only the difference of squares.",
+    "Check: is each term a perfect square? Is there a minus between them? If yes to both, apply this pattern."
+  ],
+  "examples": [
+    {
+      "description": "Factor x² − 25.",
+      "latex": "x^2 - 25 = (x-5)(x+5)"
+    },
+    {
+      "description": "Factor 4x² − 9.",
+      "latex": "4x^2 - 9 = (2x - 3)(2x + 3)"
+    }
+  ],
+  "applications": [
+    "Quickly factoring expressions without using trial and error.",
+    "Solving equations like x² = 49 by recognizing x² − 49 = 0.",
+    "Simplifying rational expressions by canceling common factors after factoring."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "factored_form", "relationship": "special_case" },
+    { "id": "sum_of_cubes", "relationship": "parallel_pattern" },
+    { "id": "difference_of_cubes", "relationship": "parallel_pattern" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring/x2f8bb11595b61c86:factor-difference-squares/v/difference-of-squares-intro",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring/x2f8bb11595b61c86:factor-difference-squares/v/difference-of-squares-intro",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Diferencia de Cuadrados",
+      "notes": [
+        "Este patrón solo funciona para la resta — una suma de cuadrados (a² + b²) no se factoriza en los reales.",
+        "Ambos términos deben ser cuadrados perfectos: busca variables al cuadrado o coeficientes cuadrado perfecto.",
+        "Los dos factores son conjugados: uno tiene suma, el otro tiene resta.",
+        "Al expandir, los términos del medio se cancelan, dejando solo la diferencia de cuadrados.",
+        "Verifica: ¿cada término es un cuadrado perfecto? ¿hay un menos entre ellos? Si sí a ambos, aplica el patrón."
+      ],
+      "examples": [
+        {
+          "description": "Factoriza x² − 25.",
+          "latex": "(x-5)(x+5)"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Diferans Kare",
+      "notes": [
+        "Modèl sa a sèlman fonksyone pou soustraksyon — yon sòm kare (a² + b²) pa faktorizasyon sou reyèl.",
+        "Tou de tèm dwe se kare pafè: chèche varyab nan kare oswa koefisyan kare pafè.",
+        "De faktè yo se konjige: youn gen plis, lòt la gen mwens.",
+        "Lè w miltipliye retounen, tèm mitan yo anile, kite sèlman diferans kare.",
+        "Tcheke: èske chak tèm se yon kare pafè? Èske gen yon mwens ant yo? Si wi pou tou de, aplike modèl la."
+      ],
+      "examples": [
+        {
+          "description": "Faktorizasyon x² − 25.",
+          "latex": "(x-5)(x+5)"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

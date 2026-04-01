@@ -1,0 +1,83 @@
+{
+  "id": "product_rule",
+  "title": "Product Rule (Exponents)",
+  "latex": "a^m \\cdot a^n = a^{m+n}",
+  "aria_label": "a to the m times a to the n equals a to the m plus n",
+  "difficulty": 1,
+  "sequence": 12,
+  "notes": [
+    "When multiplying two powers with the same base, keep the base and add the exponents.",
+    "The bases must be identical — you cannot combine x³ · y² using this rule.",
+    "Works for integer, fractional, and negative exponents.",
+    "This rule extends to three or more factors: a² · a³ · a⁴ = a⁹.",
+    "Remember: multiply the bases? No — add the exponents. The base stays the same."
+  ],
+  "examples": [
+    {
+      "description": "Simplify x³ · x⁵.",
+      "latex": "x^3 \\cdot x^5 = x^{3+5} = x^8"
+    },
+    {
+      "description": "Simplify 2³ · 2⁴.",
+      "latex": "2^3 \\cdot 2^4 = 2^{3+4} = 2^7 = 128"
+    }
+  ],
+  "applications": [
+    "Simplifying algebraic expressions in polynomials.",
+    "Combining exponential terms in scientific notation.",
+    "Working with monomials in polynomial multiplication."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "quotient_rule", "relationship": "inverse_operation" },
+    { "id": "power_rule", "relationship": "companion_formula" },
+    { "id": "fractional_exponent", "relationship": "extension" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "es": "https://es.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Regla del Producto (Exponentes)",
+      "notes": [
+        "Al multiplicar dos potencias con la misma base, conserva la base y suma los exponentes.",
+        "Las bases deben ser idénticas — no puedes combinar x³ · y² con esta regla.",
+        "Funciona con exponentes enteros, fraccionarios y negativos.",
+        "Se extiende a tres o más factores: a² · a³ · a⁴ = a⁹.",
+        "Recuerda: ¿multiplicar las bases? No — suma los exponentes. La base queda igual."
+      ],
+      "examples": [
+        {
+          "description": "Simplifica x³ · x⁵.",
+          "latex": "x^3 \\cdot x^5 = x^8"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Règ Pwodwi (Ekspozán)",
+      "notes": [
+        "Lè w miltipliye de pisans ak menm baz, kenbe baz la epi ajoute ekspozán yo.",
+        "Baz yo dwe idantik — ou pa ka konbine x³ · y² ak règ sa a.",
+        "Fonksyone pou ekspozán antye, fraksyonèl, ak negatif.",
+        "Etann pou twa faktè oswa plis: a² · a³ · a⁴ = a⁹.",
+        "Sonje: miltipliye baz yo? Non — ajoute ekspozán yo. Baz la rete menm."
+      ],
+      "examples": [
+        {
+          "description": "Simplifye x³ · x⁵.",
+          "latex": "x^3 \\cdot x^5 = x^8"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

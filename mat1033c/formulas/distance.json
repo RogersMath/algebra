@@ -1,0 +1,82 @@
+{
+  "id": "distance",
+  "title": "Distance Formula",
+  "latex": "d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}",
+  "aria_label": "d equals the square root of, open parenthesis, x-sub-2 minus x-sub-1, close parenthesis squared, plus, open parenthesis, y-sub-2 minus y-sub-1, close parenthesis squared",
+  "difficulty": 2,
+  "sequence": 5,
+  "notes": [
+    "The distance formula is derived directly from the Pythagorean theorem.",
+    "It gives the straight-line (Euclidean) distance between any two points.",
+    "Order of subtraction doesn't matter — the result is squared, so negatives cancel.",
+    "The answer is always non-negative.",
+    "If the two points share an x-value (vertical) or y-value (horizontal), the formula still works but simplifies."
+  ],
+  "examples": [
+    {
+      "description": "Find the distance between (1, 2) and (4, 6).",
+      "latex": "d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5"
+    },
+    {
+      "description": "Find the distance between (−2, 3) and (4, −5).",
+      "latex": "d = \\sqrt{(4-(-2))^2 + (-5-3)^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10"
+    }
+  ],
+  "applications": [
+    "Verifying the classification of triangles (equilateral, isosceles, scalene).",
+    "Finding the radius of a circle given its center and a point on it.",
+    "GPS and mapping: calculating straight-line distance between coordinates."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "slope", "relationship": "shares_coordinates" },
+    { "id": "midpoint", "relationship": "companion_formula" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/geometry/hs-geo-analytic-geometry/hs-geo-distance-and-midpoints/v/distance-formula",
+    "es": "https://es.khanacademy.org/math/geometry/hs-geo-analytic-geometry/hs-geo-distance-and-midpoints/v/distance-formula",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Fórmula de la Distancia",
+      "notes": [
+        "La fórmula de la distancia se deriva directamente del teorema de Pitágoras.",
+        "Proporciona la distancia en línea recta entre dos puntos.",
+        "El orden de resta no importa — el resultado se eleva al cuadrado, así que los negativos se cancelan.",
+        "La respuesta siempre es no negativa.",
+        "Si los puntos comparten un valor x o y, la fórmula funciona pero se simplifica."
+      ],
+      "examples": [
+        {
+          "description": "Encuentra la distancia entre (1, 2) y (4, 6).",
+          "latex": "d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòmil Distans",
+      "notes": [
+        "Fòmil distans lan soti dirèkteman nan teyorèm Pitagò.",
+        "Li bay distans liy dwat ant de pwen.",
+        "Lòd soustraksyon pa enpòtan — rezilta a mete nan kare, konsa negatif yo anile.",
+        "Repons lan toujou non-negatif.",
+        "Si de pwen yo pataje valè x oswa y, fòmil la fonksyone men simplifye."
+      ],
+      "examples": [
+        {
+          "description": "Jwenn distans ant (1, 2) ak (4, 6).",
+          "latex": "d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

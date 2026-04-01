@@ -1,0 +1,83 @@
+{
+  "id": "power_rule",
+  "title": "Power Rule (Exponents)",
+  "latex": "(a^m)^n = a^{mn}",
+  "aria_label": "open parenthesis a to the m close parenthesis to the n equals a to the m times n",
+  "difficulty": 1,
+  "sequence": 14,
+  "notes": [
+    "When raising a power to another power, keep the base and multiply the exponents.",
+    "This is different from the product rule — here the exponents multiply, not add.",
+    "Extends to products inside parentheses: (ab)ⁿ = aⁿbⁿ.",
+    "Also extends to quotients: (a/b)ⁿ = aⁿ/bⁿ.",
+    "Common mistake: (x²)³ = x⁶, not x⁵. Multiply, don't add, when raising a power to a power."
+  ],
+  "examples": [
+    {
+      "description": "Simplify (x³)⁴.",
+      "latex": "(x^3)^4 = x^{3 \\cdot 4} = x^{12}"
+    },
+    {
+      "description": "Simplify (2x²y³)³.",
+      "latex": "(2x^2y^3)^3 = 2^3 x^{2 \\cdot 3} y^{3 \\cdot 3} = 8x^6y^9"
+    }
+  ],
+  "applications": [
+    "Simplifying expressions with nested exponents.",
+    "Expanding polynomial expressions involving powers of binomials (preparation for binomial theorem).",
+    "Working with scientific notation raised to a power."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "product_rule", "relationship": "companion_formula" },
+    { "id": "quotient_rule", "relationship": "companion_formula" },
+    { "id": "fractional_exponent", "relationship": "extension" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "es": "https://es.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Regla de la Potencia (Exponentes)",
+      "notes": [
+        "Al elevar una potencia a otra potencia, conserva la base y multiplica los exponentes.",
+        "Esto es diferente de la regla del producto — aquí los exponentes se multiplican, no se suman.",
+        "Se extiende a productos entre paréntesis: (ab)ⁿ = aⁿbⁿ.",
+        "También se extiende a cocientes: (a/b)ⁿ = aⁿ/bⁿ.",
+        "Error común: (x²)³ = x⁶, no x⁵. Multiplica, no sumes, al elevar una potencia a una potencia."
+      ],
+      "examples": [
+        {
+          "description": "Simplifica (x³)⁴.",
+          "latex": "x^{12}"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Règ Pisans (Ekspozán)",
+      "notes": [
+        "Lè w leve yon pisans nan yon lòt pisans, kenbe baz la epi miltipliye ekspozán yo.",
+        "Sa diferan de règ pwodwi a — isit ekspozán yo miltipliye, pa ajoute.",
+        "Etann pou pwodwi anndan parantèz: (ab)ⁿ = aⁿbⁿ.",
+        "Tou etann pou kochyan: (a/b)ⁿ = aⁿ/bⁿ.",
+        "Erè komen: (x²)³ = x⁶, pa x⁵. Miltipliye, pa ajoute, lè w leve yon pisans nan yon pisans."
+      ],
+      "examples": [
+        {
+          "description": "Simplifye (x³)⁴.",
+          "latex": "x^{12}"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

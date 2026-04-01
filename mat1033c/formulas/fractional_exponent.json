@@ -1,0 +1,86 @@
+{
+  "id": "fractional_exponent",
+  "title": "Fractional Exponent",
+  "latex": "a^{1/n} = \\sqrt[n]{a}",
+  "aria_label": "a to the one over n equals the nth root of a",
+  "difficulty": 2,
+  "sequence": 16,
+  "notes": [
+    "A fractional exponent is just another way to write a root.",
+    "The denominator of the fraction tells you which root to take.",
+    "The general form is a^(m/n) = (ⁿ√a)^m = ⁿ√(aᵐ) — root first is usually easier.",
+    "Negative fractional exponents flip the base: a^(−1/n) = 1 / ⁿ√a.",
+    "Treat fractional exponents with the same rules as integer exponents (product, quotient, power)."
+  ],
+  "examples": [
+    {
+      "description": "Evaluate 8^(1/3).",
+      "latex": "8^{1/3} = \\sqrt[3]{8} = 2"
+    },
+    {
+      "description": "Evaluate 16^(3/4).",
+      "latex": "16^{3/4} = (\\sqrt[4]{16})^3 = 2^3 = 8"
+    }
+  ],
+  "applications": [
+    "Rewriting roots as exponents to apply exponent rules more easily.",
+    "Evaluating expressions involving roots without a calculator.",
+    "Connecting radical notation to exponential notation in higher mathematics."
+  ],
+  "prerequisites": [
+    { "id": "product_rule", "strength": "recommended" },
+    { "id": "radical_product", "strength": "recommended" }
+  ],
+  "related": [
+    { "id": "radical_product", "relationship": "equivalent_form" },
+    { "id": "product_rule", "relationship": "extension" },
+    { "id": "power_rule", "relationship": "extension" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/v/powers-of-products-and-quotients-integer-exponents",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:exponent-properties-review/v/powers-of-products-and-quotients-integer-exponents",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Exponente Fraccionario",
+      "notes": [
+        "Un exponente fraccionario es solo otra forma de escribir una raíz.",
+        "El denominador de la fracción indica qué raíz tomar.",
+        "La forma general es a^(m/n) = (ⁿ√a)^m — primero la raíz suele ser más fácil.",
+        "Los exponentes fraccionarios negativos invierten la base: a^(−1/n) = 1 / ⁿ√a.",
+        "Aplica las mismas reglas de exponentes enteros (producto, cociente, potencia)."
+      ],
+      "examples": [
+        {
+          "description": "Evalúa 8^(1/3).",
+          "latex": "8^{1/3} = 2"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Ekspozán Fraksyonèl",
+      "notes": [
+        "Yon ekspozán fraksyonèl se jis yon lòt fason pou ekri yon rasin.",
+        "Denominatè fraksyon an di ou ki rasin pou pran.",
+        "Fòm jeneral la se a^(m/n) = (ⁿ√a)^m — rasin premye souvan pi fasil.",
+        "Ekspozán fraksyonèl negatif yo ranvèse baz la: a^(−1/n) = 1 / ⁿ√a.",
+        "Aplike menm règ ekspozán antye (pwodwi, kochyan, pisans)."
+      ],
+      "examples": [
+        {
+          "description": "Evalye 8^(1/3).",
+          "latex": "8^{1/3} = 2"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

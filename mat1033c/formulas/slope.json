@@ -1,0 +1,93 @@
+{
+  "id": "slope",
+  "title": "Slope",
+  "latex": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+  "aria_label": "m equals y-sub-2 minus y-sub-1, divided by x-sub-2 minus x-sub-1",
+  "difficulty": 1,
+  "sequence": 1,
+  "notes": [
+    "Slope represents the rate of change between two points.",
+    "You may use any two points on the line — the result will always be the same.",
+    "Be consistent: if you do y₂ − y₁ on top, you must do x₂ − x₁ on the bottom.",
+    "Positive slopes rise left to right; negative slopes fall left to right.",
+    "A horizontal line has slope 0. A vertical line has undefined slope."
+  ],
+  "examples": [
+    {
+      "description": "Find the slope through (1, 2) and (4, 7).",
+      "latex": "m = \\frac{7 - 2}{4 - 1} = \\frac{5}{3}"
+    },
+    {
+      "description": "Find the slope through (−3, 4) and (2, −1).",
+      "latex": "m = \\frac{-1 - 4}{2 - (-3)} = \\frac{-5}{5} = -1"
+    }
+  ],
+  "applications": [
+    "Interpreting steepness and direction of a line on a graph.",
+    "Understanding rate of change in real-world contexts: speed, cost per unit, temperature change, population growth.",
+    "Determining whether a relationship is increasing, decreasing, or constant."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "point_slope", "relationship": "application" },
+    { "id": "slope_intercept", "relationship": "application" },
+    { "id": "distance", "relationship": "shares_coordinates" },
+    { "id": "midpoint", "relationship": "shares_coordinates" },
+    { "id": "average_rate_of_change", "relationship": "generalization" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs/x2f8bb11595b61c86:slope/v/introduction-to-slope",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:linear-equations-graphs/x2f8bb11595b61c86:slope/v/introduction-to-slope",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Pendiente",
+      "notes": [
+        "La pendiente representa la tasa de cambio entre dos puntos.",
+        "Puedes usar cualquier par de puntos sobre la línea — el resultado siempre será el mismo.",
+        "Sé consistente: si restas y₂ − y₁ arriba, debes restar x₂ − x₁ abajo.",
+        "Las pendientes positivas suben de izquierda a derecha; las negativas bajan.",
+        "Una línea horizontal tiene pendiente 0. Una línea vertical tiene pendiente indefinida."
+      ],
+      "examples": [
+        {
+          "description": "Encuentra la pendiente entre (1, 2) y (4, 7).",
+          "latex": "m = \\frac{7 - 2}{4 - 1} = \\frac{5}{3}"
+        },
+        {
+          "description": "Encuentra la pendiente entre (−3, 4) y (2, −1).",
+          "latex": "m = \\frac{-1 - 4}{2 - (-3)} = \\frac{-5}{5} = -1"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Pant",
+      "notes": [
+        "Pant reprezante vitès chanjman ant de pwen.",
+        "Ou ka itilize nenpòt de pwen sou liy la — rezilta a ap toujou menm.",
+        "Rete konsistan: si ou fè y₂ − y₁ anlè, ou dwe fè x₂ − x₁ anba.",
+        "Pant pozitif monte soti gòch ale adwat; pant negatif desann.",
+        "Yon liy orizontal gen pant 0. Yon liy vètikal gen pant endefini."
+      ],
+      "examples": [
+        {
+          "description": "Jwenn pant ant (1, 2) ak (4, 7).",
+          "latex": "m = \\frac{7 - 2}{4 - 1} = \\frac{5}{3}"
+        },
+        {
+          "description": "Jwenn pant ant (−3, 4) ak (2, −1).",
+          "latex": "m = \\frac{-1 - 4}{2 - (-3)} = \\frac{-5}{5} = -1"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

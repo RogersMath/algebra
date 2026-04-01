@@ -1,0 +1,85 @@
+{
+  "id": "vertex_form",
+  "title": "Vertex Form",
+  "latex": "y = a(x - h)^2 + k",
+  "aria_label": "y equals a times, open parenthesis, x minus h, close parenthesis squared, plus k",
+  "difficulty": 2,
+  "sequence": 7,
+  "notes": [
+    "Vertex form reveals the vertex of the parabola immediately: the vertex is (h, k).",
+    "Watch the sign: y = a(x − 3)² + 5 has vertex (3, 5), not (−3, 5).",
+    "a still controls direction and width, just as in standard form.",
+    "If k > 0, the vertex is above the x-axis. If k < 0, it is below.",
+    "Convert from standard form to vertex form by completing the square."
+  ],
+  "examples": [
+    {
+      "description": "Identify the vertex of y = 2(x − 4)² + 1.",
+      "latex": "\\text{Vertex} = (4, 1), \\quad \\text{opens upward since } a = 2 > 0"
+    },
+    {
+      "description": "Identify the vertex of y = −(x + 2)² − 3.",
+      "latex": "\\text{Vertex} = (-2, -3), \\quad \\text{opens downward since } a = -1 < 0"
+    }
+  ],
+  "applications": [
+    "Instantly reading the maximum or minimum value of a quadratic (the k-value).",
+    "Graphing parabolas quickly from a known vertex and direction.",
+    "Optimization problems: finding the peak height of a projectile, maximum profit, minimum cost."
+  ],
+  "prerequisites": [
+    { "id": "standard_form", "strength": "recommended" }
+  ],
+  "related": [
+    { "id": "standard_form", "relationship": "equivalent_form" },
+    { "id": "factored_form", "relationship": "equivalent_form" },
+    { "id": "axis_of_symmetry", "relationship": "companion_formula" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/v/vertex-form-intro",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:vertex-form/v/vertex-form-intro",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Forma Vértice",
+      "notes": [
+        "La forma vértice revela el vértice de la parábola de inmediato: el vértice es (h, k).",
+        "Ojo con el signo: y = a(x − 3)² + 5 tiene vértice (3, 5), no (−3, 5).",
+        "a sigue controlando la dirección y el ancho, igual que en la forma estándar.",
+        "Si k > 0, el vértice está sobre el eje x. Si k < 0, está debajo.",
+        "Convierte de la forma estándar a la forma vértice completando el cuadrado."
+      ],
+      "examples": [
+        {
+          "description": "Identifica el vértice de y = 2(x − 4)² + 1.",
+          "latex": "\\text{Vértice} = (4, 1), \\quad \\text{abre hacia arriba ya que } a = 2 > 0"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòm Vèrtèks",
+      "notes": [
+        "Fòm vèrtèks montre vèrtèks parabòl la imedyatman: vèrtèks la se (h, k).",
+        "Fè atansyon ak siy la: y = a(x − 3)² + 5 gen vèrtèks (3, 5), pa (−3, 5).",
+        "a toujou kontwole direksyon ak lajè, menm jan nan fòm estanda.",
+        "Si k > 0, vèrtèks la anlè aks x. Si k < 0, li anba.",
+        "Konvèti soti nan fòm estanda ale nan fòm vèrtèks pa fè kare konplè."
+      ],
+      "examples": [
+        {
+          "description": "Idantifye vèrtèks y = 2(x − 4)² + 1.",
+          "latex": "\\text{Vèrtèks} = (4, 1)"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

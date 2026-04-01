@@ -1,0 +1,83 @@
+{
+  "id": "quotient_rule",
+  "title": "Quotient Rule (Exponents)",
+  "latex": "\\frac{a^m}{a^n} = a^{m-n}",
+  "aria_label": "a to the m divided by a to the n equals a to the m minus n",
+  "difficulty": 1,
+  "sequence": 13,
+  "notes": [
+    "When dividing two powers with the same base, keep the base and subtract the exponents.",
+    "Always subtract the denominator's exponent from the numerator's: top minus bottom.",
+    "If m < n, the result is a negative exponent: a⁻² = 1/a².",
+    "If m = n, the result is a⁰ = 1 (for any nonzero base).",
+    "The bases must be the same — this rule doesn't apply to different bases."
+  ],
+  "examples": [
+    {
+      "description": "Simplify x⁷ ÷ x³.",
+      "latex": "\\frac{x^7}{x^3} = x^{7-3} = x^4"
+    },
+    {
+      "description": "Simplify a² ÷ a⁵.",
+      "latex": "\\frac{a^2}{a^5} = a^{2-5} = a^{-3} = \\frac{1}{a^3}"
+    }
+  ],
+  "applications": [
+    "Simplifying rational expressions with matching bases.",
+    "Reducing scientific notation expressions.",
+    "Deriving zero and negative exponent rules."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "product_rule", "relationship": "inverse_operation" },
+    { "id": "power_rule", "relationship": "companion_formula" },
+    { "id": "fractional_exponent", "relationship": "extension" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "es": "https://es.khanacademy.org/math/pre-algebra/pre-algebra-exponents-radicals/pre-algebra-exponent-properties/v/exponent-properties-involving-products",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Regla del Cociente (Exponentes)",
+      "notes": [
+        "Al dividir dos potencias con la misma base, conserva la base y resta los exponentes.",
+        "Siempre resta el exponente del denominador del numerador: arriba menos abajo.",
+        "Si m < n, el resultado es un exponente negativo: a⁻² = 1/a².",
+        "Si m = n, el resultado es a⁰ = 1 (para cualquier base no nula).",
+        "Las bases deben ser iguales — esta regla no aplica a bases diferentes."
+      ],
+      "examples": [
+        {
+          "description": "Simplifica x⁷ ÷ x³.",
+          "latex": "x^4"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Règ Kochyan (Ekspozán)",
+      "notes": [
+        "Lè w divize de pisans ak menm baz, kenbe baz la epi soustrè ekspozán yo.",
+        "Toujou soustrè ekspozán denominatè a soti nan numeratè a: anlè mwens anba.",
+        "Si m < n, rezilta a se yon ekspozán negatif: a⁻² = 1/a².",
+        "Si m = n, rezilta a se a⁰ = 1 (pou nenpòt baz ki pa zewo).",
+        "Baz yo dwe menm — règ sa a pa aplike pou baz diferan."
+      ],
+      "examples": [
+        {
+          "description": "Simplifye x⁷ ÷ x³.",
+          "latex": "x^4"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

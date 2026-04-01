@@ -1,0 +1,85 @@
+{
+  "id": "standard_form",
+  "title": "Standard Form (Quadratic)",
+  "latex": "y = ax^2 + bx + c",
+  "aria_label": "y equals a times x squared, plus b times x, plus c",
+  "difficulty": 2,
+  "sequence": 6,
+  "notes": [
+    "Standard form is the most common way a quadratic function is written.",
+    "a determines the direction and width of the parabola: if a > 0 it opens up; if a < 0 it opens down.",
+    "The larger |a| is, the narrower the parabola.",
+    "c is the y-intercept — the value of the function when x = 0.",
+    "From standard form you can find the axis of symmetry using x = −b/(2a), and then the vertex."
+  ],
+  "examples": [
+    {
+      "description": "Identify a, b, and c in y = 3x² − 5x + 2.",
+      "latex": "a = 3, \\quad b = -5, \\quad c = 2"
+    },
+    {
+      "description": "Find the y-intercept of y = −2x² + 4x − 1.",
+      "latex": "\\text{When } x = 0: \\quad y = -2(0)^2 + 4(0) - 1 = -1"
+    }
+  ],
+  "applications": [
+    "Modeling projectile motion: height as a function of time.",
+    "Describing profit/loss curves in business contexts.",
+    "Serving as the entry point for applying the quadratic formula."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "vertex_form", "relationship": "equivalent_form" },
+    { "id": "factored_form", "relationship": "equivalent_form" },
+    { "id": "quadratic_formula", "relationship": "application" },
+    { "id": "axis_of_symmetry", "relationship": "derived_from" },
+    { "id": "discriminant", "relationship": "derived_from" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Forma Estándar (Cuadrática)",
+      "notes": [
+        "La forma estándar es la forma más común en que se escribe una función cuadrática.",
+        "a determina la dirección y ancho de la parábola: si a > 0 abre hacia arriba; si a < 0 abre hacia abajo.",
+        "Cuanto mayor sea |a|, más estrecha es la parábola.",
+        "c es el intercepto en y — el valor de la función cuando x = 0.",
+        "Desde la forma estándar puedes encontrar el eje de simetría con x = −b/(2a) y luego el vértice."
+      ],
+      "examples": [
+        {
+          "description": "Identifica a, b y c en y = 3x² − 5x + 2.",
+          "latex": "a = 3, \\quad b = -5, \\quad c = 2"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòm Estanda (Kwadratik)",
+      "notes": [
+        "Fòm estanda se fason ki pi komen pou ekri yon fonksyon kwadratik.",
+        "a detèmine direksyon ak lajè parabòl la: si a > 0 li louvri anlè; si a < 0 li louvri anba.",
+        "Pi gwo |a| a, pi etwa parabòl la.",
+        "c se entèsèpsyon-y la — valè fonksyon an lè x = 0.",
+        "Soti nan fòm estanda ou ka jwenn aks simetri a ak x = −b/(2a), apre vèrtèks la."
+      ],
+      "examples": [
+        {
+          "description": "Idantifye a, b ak c nan y = 3x² − 5x + 2.",
+          "latex": "a = 3, \\quad b = -5, \\quad c = 2"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

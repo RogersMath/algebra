@@ -1,0 +1,82 @@
+{
+  "id": "midpoint",
+  "title": "Midpoint Formula",
+  "latex": "M = \\left(\\frac{x_1 + x_2}{2},\\, \\frac{y_1 + y_2}{2}\\right)",
+  "aria_label": "M equals the point with x-coordinate x-sub-1 plus x-sub-2 divided by 2, and y-coordinate y-sub-1 plus y-sub-2 divided by 2",
+  "difficulty": 1,
+  "sequence": 4,
+  "notes": [
+    "The midpoint is the exact center point between two given points.",
+    "Average the x-coordinates for the new x; average the y-coordinates for the new y.",
+    "The result is always a coordinate pair (x, y), not a single number.",
+    "Order of the points doesn't matter — averaging is commutative.",
+    "Useful when you need to bisect a segment or find the center of a diameter."
+  ],
+  "examples": [
+    {
+      "description": "Find the midpoint between (2, 4) and (8, 10).",
+      "latex": "M = \\left(\\frac{2+8}{2}, \\frac{4+10}{2}\\right) = (5, 7)"
+    },
+    {
+      "description": "Find the midpoint between (−3, 1) and (5, −7).",
+      "latex": "M = \\left(\\frac{-3+5}{2}, \\frac{1+(-7)}{2}\\right) = (1, -3)"
+    }
+  ],
+  "applications": [
+    "Finding the center of a circle given the endpoints of a diameter.",
+    "Bisecting a line segment in geometry and construction problems.",
+    "Locating halfway points in navigation, mapping, or data interpolation."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "slope", "relationship": "shares_coordinates" },
+    { "id": "distance", "relationship": "companion_formula" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/geometry/hs-geo-analytic-geometry/hs-geo-distance-and-midpoints/v/midpoint-formula",
+    "es": "https://es.khanacademy.org/math/geometry/hs-geo-analytic-geometry/hs-geo-distance-and-midpoints/v/midpoint-formula",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Fórmula del Punto Medio",
+      "notes": [
+        "El punto medio es el centro exacto entre dos puntos dados.",
+        "Promedia las coordenadas x para la nueva x; promedia las coordenadas y para la nueva y.",
+        "El resultado siempre es un par de coordenadas (x, y), no un número único.",
+        "El orden de los puntos no importa — el promedio es conmutativo.",
+        "Útil cuando necesitas bisecar un segmento o encontrar el centro de un diámetro."
+      ],
+      "examples": [
+        {
+          "description": "Encuentra el punto medio entre (2, 4) y (8, 10).",
+          "latex": "M = \\left(\\frac{2+8}{2}, \\frac{4+10}{2}\\right) = (5, 7)"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòmil Pwen Mitan",
+      "notes": [
+        "Pwen mitan an se sant egzak ant de pwen yo.",
+        "Fè mwayèn kowòdone x yo pou nouvo x la; fè mwayèn kowòdone y yo pou nouvo y la.",
+        "Rezilta a toujou se yon pè kowòdone (x, y), pa yon sèl nimewo.",
+        "Lòd pwen yo pa enpòtan — mwayèn an komutatif.",
+        "Itil lè ou bezwen koupe yon sègman an de oswa jwenn sant yon dyamèt."
+      ],
+      "examples": [
+        {
+          "description": "Jwenn pwen mitan ant (2, 4) ak (8, 10).",
+          "latex": "M = \\left(\\frac{2+8}{2}, \\frac{4+10}{2}\\right) = (5, 7)"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

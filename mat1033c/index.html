@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MAT1033C Intermediate Algebra formula reference — free, accessible, multilingual. From Palm Beach State College." />
+  <meta name="theme-color" content="#08152C" />
+
+  <title>MAT1033C — SLC Survival Guide | PBSC</title>
+
+  <!-- Open Graph (for link previews) -->
+  <meta property="og:title"       content="MAT1033C SLC Survival Guide" />
+  <meta property="og:description" content="Free algebra formula reference for MAT1033C students at Palm Beach State College." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- MathJax — SVG output for best accessibility -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)']], displayMath: [['\\[','\\]']] },
+      svg: { fontCache: 'global' },
+      options: { skipHtmlTags: ['script','noscript','style','textarea'] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="./manifest.json" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Skip navigation (WCAG 2.1 SC 2.4.1) -->
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+  <!-- Click-to-close overlay for drawer -->
+  <div id="menuOverlay" role="presentation" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header role="banner">
+    <button id="hamburger"
+            class="hamburger"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="sidemenu">
+      <span></span><span></span><span></span>
+    </button>
+    <h1>MAT1033C<br><span style="font-weight:400;font-size:0.7em;letter-spacing:0.15em;">SLC Survival Guide</span></h1>
+  </header>
+
+  <!-- Side navigation (populated by menu.js) -->
+  <nav id="sidemenu"
+       class="side-menu"
+       role="navigation"
+       aria-label="Formula sections"
+       aria-hidden="true">
+  </nav>
+
+  <!-- Main content (populated by render.js) -->
+  <main id="mainContent"
+        role="main"
+        aria-label="Formula cards"
+        tabindex="-1">
+    <!-- Formula cards injected here by render.js -->
+    <p style="font-family:'Cinzel',serif;color:#1A3B6E;text-align:center;padding:2rem;">
+      Loading…
+    </p>
+  </main>
+
+  <!-- Dot navigation bar (populated by render.js) -->
+  <div id="dotNav"
+       role="tablist"
+       aria-label="Section navigation">
+  </div>
+
+  <!-- Arrow buttons (desktop) -->
+  <button id="arrowLeft"
+          class="arrow-btn left"
+          aria-label="Previous section"
+          disabled>&#8249;</button>
+  <button id="arrowRight"
+          class="arrow-btn right"
+          aria-label="Next section">&#8250;</button>
+
+  <!-- Formula detail panel (populated by detail.js) -->
+  <section class="formula-detail"
+           role="dialog"
+           aria-modal="true"
+           aria-label="Formula detail"
+           aria-hidden="true">
+    <button class="detail-back-btn" aria-label="Close detail and return to formulas">
+      ← Back
+    </button>
+    <div class="detail-inner"></div>
+  </section>
+
+  <!-- Footer CTA (populated by render.js) -->
+  <footer role="contentinfo">
+    <a href="https://pbsc.edu/slc/" target="_blank" rel="noopener">
+      Want tutors to help you perform at your very best? PBSC students click here.
+    </a>
+  </footer>
+
+  <!-- Engine bootstrap -->
+  <script type="module">
+    import Engine from './js/engine.js';
+    window.addEventListener('DOMContentLoaded', async () => {
+      await Engine.initApp();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "id": "axis_of_symmetry",
+  "title": "Axis of Symmetry",
+  "latex": "x = -\\frac{b}{2a}",
+  "aria_label": "x equals negative b divided by 2 a",
+  "difficulty": 2,
+  "sequence": 11,
+  "notes": [
+    "The axis of symmetry is the vertical line that divides a parabola into two mirror-image halves.",
+    "It always passes through the vertex — so x = −b/(2a) gives the x-coordinate of the vertex.",
+    "Substitute this x-value back into the original equation to find the y-coordinate of the vertex.",
+    "The axis of symmetry is also the average of the two x-intercepts (when they exist).",
+    "For a parabola in vertex form y = a(x − h)² + k, the axis of symmetry is simply x = h."
+  ],
+  "examples": [
+    {
+      "description": "Find the axis of symmetry of y = 2x² − 8x + 3.",
+      "latex": "x = -\\frac{-8}{2(2)} = \\frac{8}{4} = 2"
+    },
+    {
+      "description": "Then find the vertex by substituting x = 2 back in.",
+      "latex": "y = 2(2)^2 - 8(2) + 3 = 8 - 16 + 3 = -5 \\quad\\Rightarrow\\quad \\text{Vertex: } (2, -5)"
+    }
+  ],
+  "applications": [
+    "Graphing a parabola efficiently — find axis, then vertex, then two symmetric points.",
+    "Solving optimization problems where you need the minimum or maximum output.",
+    "Verifying vertex form: h should match the axis of symmetry value."
+  ],
+  "prerequisites": [
+    { "id": "standard_form", "strength": "required" }
+  ],
+  "related": [
+    { "id": "standard_form", "relationship": "derived_from" },
+    { "id": "vertex_form", "relationship": "companion_formula" },
+    { "id": "quadratic_formula", "relationship": "shares_expression" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratic-functions-equations/x2f8bb11595b61c86:quadratic-forms-features/v/finding-features-of-quadratic-functions",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Eje de Simetría",
+      "notes": [
+        "El eje de simetría es la línea vertical que divide una parábola en dos mitades especulares.",
+        "Siempre pasa por el vértice — así que x = −b/(2a) da la coordenada x del vértice.",
+        "Sustituye este valor de x en la ecuación original para encontrar la coordenada y del vértice.",
+        "El eje de simetría también es el promedio de los dos interceptos en x (cuando existen).",
+        "Para una parábola en forma vértice y = a(x − h)² + k, el eje de simetría es simplemente x = h."
+      ],
+      "examples": [
+        {
+          "description": "Encuentra el eje de simetría de y = 2x² − 8x + 3.",
+          "latex": "x = 2"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Aks Simetri",
+      "notes": [
+        "Aks simetri a se liy vètikal ki divize yon parabòl an de demi ki se imaj miwa.",
+        "Li toujou pase nan vèrtèks la — konsa x = −b/(2a) bay kowòdone x vèrtèks la.",
+        "Substitye valè x sa a nan ekwasyon orijinal la pou jwenn kowòdone y vèrtèks la.",
+        "Aks simetri a se tou mwayèn de entèsèpsyon-x yo (lè yo egziste).",
+        "Pou yon parabòl nan fòm vèrtèks y = a(x − h)² + k, aks simetri a se jis x = h."
+      ],
+      "examples": [
+        {
+          "description": "Jwenn aks simetri y = 2x² − 8x + 3.",
+          "latex": "x = 2"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

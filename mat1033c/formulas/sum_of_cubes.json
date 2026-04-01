@@ -1,0 +1,82 @@
+{
+  "id": "sum_of_cubes",
+  "title": "Sum of Cubes",
+  "latex": "a^3 + b^3 = (a + b)(a^2 - ab + b^2)",
+  "aria_label": "a cubed plus b cubed equals, open parenthesis, a plus b, close parenthesis, times, open parenthesis, a squared minus a b plus b squared, close parenthesis",
+  "difficulty": 3,
+  "sequence": 18,
+  "notes": [
+    "Memorize the pattern: the first factor matches the sign of the original (plus), and the trinomial follows SOAP — Same, Opposite, Always Positive.",
+    "SOAP: Same sign as original (+), Opposite sign (−ab), Always Positive (+b²).",
+    "The trinomial factor (a² − ab + b²) does not factor further over the reals.",
+    "Both terms must be perfect cubes: 1, 8, 27, 64, 125, ... and their variable equivalents.",
+    "Do not confuse with the difference of cubes — the only change is the sign of the linear factor."
+  ],
+  "examples": [
+    {
+      "description": "Factor x³ + 8.",
+      "latex": "x^3 + 8 = x^3 + 2^3 = (x + 2)(x^2 - 2x + 4)"
+    },
+    {
+      "description": "Factor 27x³ + 64.",
+      "latex": "27x^3 + 64 = (3x)^3 + 4^3 = (3x + 4)(9x^2 - 12x + 16)"
+    }
+  ],
+  "applications": [
+    "Factoring cubic polynomials that match the sum-of-cubes pattern.",
+    "Simplifying rational expressions involving cubic terms.",
+    "Foundation for polynomial long division and higher-degree factoring."
+  ],
+  "prerequisites": [],
+  "related": [
+    { "id": "difference_of_cubes", "relationship": "parallel_pattern" },
+    { "id": "difference_of_squares", "relationship": "parallel_pattern" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra-home/alg-polynomials/alg-advanced-polynomial-factorization-methods/v/factoring-sum-of-cubes",
+    "es": "https://es.khanacademy.org/math/algebra-home/alg-polynomials/alg-advanced-polynomial-factorization-methods/v/factoring-sum-of-cubes",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Suma de Cubos",
+      "notes": [
+        "Memoriza el patrón: el primer factor tiene el mismo signo del original (más), y el trinomio sigue SOAP — Mismo, Opuesto, Siempre Positivo.",
+        "SOAP: Mismo signo (+), Signo Opuesto (−ab), Siempre Positivo (+b²).",
+        "El factor trinomio (a² − ab + b²) no se factoriza más sobre los reales.",
+        "Ambos términos deben ser cubos perfectos: 1, 8, 27, 64, 125...",
+        "No confundas con la diferencia de cubos — solo cambia el signo del factor lineal."
+      ],
+      "examples": [
+        {
+          "description": "Factoriza x³ + 8.",
+          "latex": "(x + 2)(x^2 - 2x + 4)"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Sòm Kib",
+      "notes": [
+        "Memorize modèl la: premye faktè a gen menm siy ak orijinal la (plis), ak trinòm lan swiv SOAP — Menm, Opozit, Toujou Pozitif.",
+        "SOAP: Menm siy (+), Siy Opozit (−ab), Toujou Pozitif (+b²).",
+        "Faktè trinòm nan (a² − ab + b²) pa faktorizasyon plis sou reyèl.",
+        "Tou de tèm dwe se kib pafè: 1, 8, 27, 64, 125...",
+        "Pa konfon ak diferans kib — sèl chanjman se siy faktè lineyè a."
+      ],
+      "examples": [
+        {
+          "description": "Faktorizasyon x³ + 8.",
+          "latex": "(x + 2)(x^2 - 2x + 4)"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}

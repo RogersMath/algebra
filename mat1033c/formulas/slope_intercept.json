@@ -1,0 +1,85 @@
+{
+  "id": "slope_intercept",
+  "title": "Slope–Intercept Form",
+  "latex": "y = mx + b",
+  "aria_label": "y equals m times x plus b",
+  "difficulty": 1,
+  "sequence": 3,
+  "notes": [
+    "m is the slope — the rate at which y changes for every 1-unit increase in x.",
+    "b is the y-intercept — the value of y when x = 0 (where the line crosses the y-axis).",
+    "This is the most common form for graphing a line quickly.",
+    "To graph: plot (0, b), then use slope m = rise/run to find a second point.",
+    "If an equation is not in this form, solve for y to reveal m and b."
+  ],
+  "examples": [
+    {
+      "description": "Identify slope and y-intercept of y = 2x − 3.",
+      "latex": "m = 2, \\quad b = -3"
+    },
+    {
+      "description": "Rewrite 3x + 2y = 8 in slope–intercept form.",
+      "latex": "2y = -3x + 8 \\quad\\Rightarrow\\quad y = -\\frac{3}{2}x + 4"
+    }
+  ],
+  "applications": [
+    "Graphing lines by hand using slope and y-intercept.",
+    "Interpreting linear models: the slope is the unit rate, and b is the starting value.",
+    "Writing equations from graphs by reading m and b directly."
+  ],
+  "prerequisites": [
+    { "id": "slope", "strength": "required" }
+  ],
+  "related": [
+    { "id": "slope", "relationship": "prerequisite" },
+    { "id": "point_slope", "relationship": "equivalent_form" },
+    { "id": "standard_form", "relationship": "equivalent_form" }
+  ],
+  "video": {
+    "en": "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:forms-of-linear-equations/x2f8bb11595b61c86:intro-to-slope-intercept-form/v/slope-intercept-form",
+    "es": "https://es.khanacademy.org/math/algebra/x2f8bb11595b61c86:forms-of-linear-equations/x2f8bb11595b61c86:intro-to-slope-intercept-form/v/slope-intercept-form",
+    "ht": null
+  },
+  "translations": {
+    "es": {
+      "title": "Forma Pendiente-Intercepto",
+      "notes": [
+        "m es la pendiente — la tasa a la que y cambia por cada aumento de 1 unidad en x.",
+        "b es el intercepto en y — el valor de y cuando x = 0.",
+        "Esta es la forma más común para graficar una línea rápidamente.",
+        "Para graficar: traza (0, b), luego usa m = sube/corre para encontrar un segundo punto.",
+        "Si una ecuación no está en esta forma, despeja y para revelar m y b."
+      ],
+      "examples": [
+        {
+          "description": "Identifica pendiente e intercepto de y = 2x − 3.",
+          "latex": "m = 2, \\quad b = -3"
+        }
+      ]
+    },
+    "ht": {
+      "title": "Fòm Pant-Entèsèpsyon",
+      "notes": [
+        "m se pant la — vitès chanjman y pou chak ogmantasyon 1 inite nan x.",
+        "b se entèsèpsyon-y la — valè y lè x = 0.",
+        "Sa se fòm ki pi komen pou trace yon liy rapidman.",
+        "Pou trace: mete (0, b), apre itilize m = monte/kouri pou jwenn yon dezyèm pwen.",
+        "Si yon ekwasyon pa nan fòm sa a, rezoud pou y pou wè m ak b."
+      ],
+      "examples": [
+        {
+          "description": "Idantifye pant ak entèsèpsyon nan y = 2x − 3.",
+          "latex": "m = 2, \\quad b = -3"
+        }
+      ]
+    }
+  },
+  "version": "1.1.0",
+  "copyright": {
+    "author": "Jesse Rogers",
+    "institution": "Palm Beach State College",
+    "contributors": [],
+    "license": "MIT",
+    "granted": "2026-03-30"
+  }
+}
