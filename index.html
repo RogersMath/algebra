@@ -28,11 +28,391 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
-  <!-- PWA manifest -->
+  <!-- PWA manifest & icons -->
   <link rel="manifest" href="./manifest.json" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png" />
+  <link rel="shortcut icon" href="./favicon.ico" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="./style.css" />
+
+<!-- build:jsonld -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "LearningResource",
+    "WebApplication"
+  ],
+  "@id": "https://rogersmath.github.io/algebra",
+  "name": "Algebra SLC Survival Guide",
+  "alternateName": "MAT1033C Formula Reference",
+  "description": "A structured, accessible, multilingual-ready algebra reference for MAT1033C learners, featuring formulas, notes, examples, prerequisite-linked concepts, and curated video resources.",
+  "url": "https://rogersmath.github.io/algebra",
+  "inLanguage": [
+    "en",
+    "es",
+    "ht"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://opensource.org/licenses/MIT",
+  "educationalLevel": [
+    "developmental algebra",
+    "intermediate algebra",
+    "college algebra"
+  ],
+  "learningResourceType": "Reference",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student"
+  },
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Palm Beach State College",
+    "url": "https://pbsc.edu"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Jesse Rogers",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Palm Beach State College"
+    }
+  },
+  "hasPart": [
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-slope",
+      "name": "Slope",
+      "description": "Slope represents the rate of change between two points. You may use any two points on the line — the result will always be the same. Be consistent: if you do y₂ − y₁ on top, you must do x₂ − x₁ on the bottom. Positive slopes rise left to right; negative slopes fall left to right. A horizontal line has slope 0. A vertical line has undefined slope.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-point_slope",
+      "name": "Point–Slope Form",
+      "description": "Use point–slope form when you know a point on the line and its slope. (x₁, y₁) is any known point on the line; m is the slope. This form is especially useful when writing the equation of a line from two points. You can convert to slope–intercept form by distributing and solving for y. Either of the two given points can serve as (x₁, y₁) — both give the same line.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-slope_intercept",
+      "name": "Slope–Intercept Form",
+      "description": "m is the slope — the rate at which y changes for every 1-unit increase in x. b is the y-intercept — the value of y when x = 0 (where the line crosses the y-axis). This is the most common form for graphing a line quickly. To graph: plot (0, b), then use slope m = rise/run to find a second point. If an equation is not in this form, solve for y to reveal m and b.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-midpoint",
+      "name": "Midpoint Formula",
+      "description": "The midpoint is the exact center point between two given points. Average the x-coordinates for the new x; average the y-coordinates for the new y. The result is always a coordinate pair (x, y), not a single number. Order of the points doesn't matter — averaging is commutative. Useful when you need to bisect a segment or find the center of a diameter.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-distance",
+      "name": "Distance Formula",
+      "description": "The distance formula is derived directly from the Pythagorean theorem. It gives the straight-line (Euclidean) distance between any two points. Order of subtraction doesn't matter — the result is squared, so negatives cancel. The answer is always non-negative. If the two points share an x-value (vertical) or y-value (horizontal), the formula still works but simplifies.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-standard_form",
+      "name": "Standard Form (Quadratic)",
+      "description": "Standard form is the most common way a quadratic function is written. a determines the direction and width of the parabola: if a > 0 it opens up; if a < 0 it opens down. The larger |a| is, the narrower the parabola. c is the y-intercept — the value of the function when x = 0. From standard form you can find the axis of symmetry using x = −b/(2a), and then the vertex.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-vertex_form",
+      "name": "Vertex Form",
+      "description": "Vertex form reveals the vertex of the parabola immediately: the vertex is (h, k). Watch the sign: y = a(x − 3)² + 5 has vertex (3, 5), not (−3, 5). a still controls direction and width, just as in standard form. If k > 0, the vertex is above the x-axis. If k < 0, it is below. Convert from standard form to vertex form by completing the square.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-factored_form",
+      "name": "Factored Form",
+      "description": "Factored form reveals the zeros (x-intercepts) of the parabola directly: they are r₁ and r₂. Set each factor equal to zero to find the roots: x − r₁ = 0 gives x = r₁. The axis of symmetry is the average of the two roots: x = (r₁ + r₂) / 2. If a quadratic cannot be factored over integers, use the quadratic formula instead. a is the same leading coefficient as in standard and vertex form.",
+      "educationalLevel": "Advanced",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-quadratic_formula",
+      "name": "Quadratic Formula",
+      "description": "The quadratic formula solves any quadratic equation in standard form ax² + bx + c = 0. The ± means there are potentially two solutions — one with + and one with −. Always identify a, b, and c carefully before substituting. Watch signs. The expression under the radical, b² − 4ac, is the discriminant. It tells you how many real solutions exist. If the discriminant is negative, there are no real solutions (the parabola doesn't cross the x-axis).",
+      "educationalLevel": "Advanced",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-discriminant",
+      "name": "Discriminant",
+      "description": "The discriminant is the expression inside the square root of the quadratic formula. If D > 0: two distinct real solutions (the parabola crosses the x-axis twice). If D = 0: exactly one real solution, a repeated root (the parabola touches the x-axis once). If D < 0: no real solutions (the parabola does not cross the x-axis). You can classify the number of solutions before solving — saving time on exams.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-axis_of_symmetry",
+      "name": "Axis of Symmetry",
+      "description": "The axis of symmetry is the vertical line that divides a parabola into two mirror-image halves. It always passes through the vertex — so x = −b/(2a) gives the x-coordinate of the vertex. Substitute this x-value back into the original equation to find the y-coordinate of the vertex. The axis of symmetry is also the average of the two x-intercepts (when they exist). For a parabola in vertex form y = a(x − h)² + k, the axis of symmetry is simply x = h.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-product_rule",
+      "name": "Product Rule (Exponents)",
+      "description": "When multiplying two powers with the same base, keep the base and add the exponents. The bases must be identical — you cannot combine x³ · y² using this rule. Works for integer, fractional, and negative exponents. This rule extends to three or more factors: a² · a³ · a⁴ = a⁹. Remember: multiply the bases? No — add the exponents. The base stays the same.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-quotient_rule",
+      "name": "Quotient Rule (Exponents)",
+      "description": "When dividing two powers with the same base, keep the base and subtract the exponents. Always subtract the denominator's exponent from the numerator's: top minus bottom. If m < n, the result is a negative exponent: a⁻² = 1/a². If m = n, the result is a⁰ = 1 (for any nonzero base). The bases must be the same — this rule doesn't apply to different bases.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-power_rule",
+      "name": "Power Rule (Exponents)",
+      "description": "When raising a power to another power, keep the base and multiply the exponents. This is different from the product rule — here the exponents multiply, not add. Extends to products inside parentheses: (ab)ⁿ = aⁿbⁿ. Also extends to quotients: (a/b)ⁿ = aⁿ/bⁿ. Common mistake: (x²)³ = x⁶, not x⁵. Multiply, don't add, when raising a power to a power.",
+      "educationalLevel": "Foundational",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-radical_product",
+      "name": "Radical Product Rule",
+      "description": "The square root of a product equals the product of the individual square roots. Use this to simplify radicals by factoring out perfect squares. Also works in reverse — you can combine two radicals into one: √3 · √5 = √15. Requires a ≥ 0 and b ≥ 0 when working in real numbers. Common application: √50 = √(25 · 2) = √25 · √2 = 5√2.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-fractional_exponent",
+      "name": "Fractional Exponent",
+      "description": "A fractional exponent is just another way to write a root. The denominator of the fraction tells you which root to take. The general form is a^(m/n) = (ⁿ√a)^m = ⁿ√(aᵐ) — root first is usually easier. Negative fractional exponents flip the base: a^(−1/n) = 1 / ⁿ√a. Treat fractional exponents with the same rules as integer exponents (product, quotient, power).",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-difference_of_squares",
+      "name": "Difference of Squares",
+      "description": "This pattern only works for subtraction — a sum of squares (a² + b²) does not factor over the reals. Both terms must be perfect squares: look for squared variables or perfect square coefficients. The two factors are conjugates: one has a plus, the other has a minus. When multiplied back out, the middle terms cancel, leaving only the difference of squares. Check: is each term a perfect square? Is there a minus between them? If yes to both, apply this pattern.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-sum_of_cubes",
+      "name": "Sum of Cubes",
+      "description": "Memorize the pattern: the first factor matches the sign of the original (plus), and the trinomial follows SOAP — Same, Opposite, Always Positive. SOAP: Same sign as original (+), Opposite sign (−ab), Always Positive (+b²). The trinomial factor (a² − ab + b²) does not factor further over the reals. Both terms must be perfect cubes: 1, 8, 27, 64, 125, ... and their variable equivalents. Do not confuse with the difference of cubes — the only change is the sign of the linear factor.",
+      "educationalLevel": "Advanced",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-difference_of_cubes",
+      "name": "Difference of Cubes",
+      "description": "Like the sum of cubes, use the SOAP mnemonic: Same, Opposite, Always Positive. SOAP: Same sign as original (−), Opposite sign (+ab), Always Positive (+b²). The trinomial factor (a² + ab + b²) does not factor further over the reals. Identify a and b by taking the cube root of each term. The only difference from sum of cubes is the sign of the linear factor and the middle term of the trinomial.",
+      "educationalLevel": "Advanced",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    },
+    {
+      "@type": "LearningResource",
+      "@id": "https://rogersmath.github.io/algebra#formula-average_rate_of_change",
+      "name": "Average Rate of Change",
+      "description": "The average rate of change measures how much a function's output changes per unit of input over an interval. It is the slope of the secant line connecting the two points (a, f(a)) and (b, f(b)) on the graph. For a linear function, the average rate of change is always equal to the slope m. For a nonlinear function (like a parabola), the rate of change varies — this formula gives the average over [a, b]. This formula is the foundation of differential calculus — the derivative is the limit of the average rate of change as the interval shrinks to zero.",
+      "educationalLevel": "Intermediate",
+      "learningResourceType": "Formula Reference",
+      "inLanguage": [
+        "en",
+        "es",
+        "ht"
+      ],
+      "isPartOf": {
+        "@id": "https://rogersmath.github.io/algebra"
+      }
+    }
+  ],
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<!-- /build:jsonld -->
 </head>
 <body>
 
@@ -114,5 +494,411 @@
     });
   </script>
 
+  <!-- Service Worker registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .catch(err => console.warn('SW registration failed:', err));
+      });
+    }
+  </script>
+
+
+<!-- SEO: static content for crawlers, agents, and no-JS users -->
+<!-- build:seo -->
+<div id="seo-content"
+     aria-hidden="true"
+     style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;"
+     itemscope
+     itemtype="https://schema.org/Course">
+  <h1 itemprop="name">Intermediate Algebra — SLC Survival Guide</h1>
+  <p itemprop="description">A structured, accessible, multilingual-ready algebra reference for MAT1033C learners, featuring formulas, notes, examples, prerequisite-linked concepts, and curated video resources.</p>
+  <p itemprop="provider" itemscope itemtype="https://schema.org/EducationalOrganization">
+    <span itemprop="name">Palm Beach State College</span>
+  </p>
+  
+      <section id="linear" aria-labelledby="section-linear">
+        <h2 id="section-linear">Linear Equations &amp; Coordinate Geometry</h2>
+        
+        <article id="formula-slope" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Slope</h3>
+          <p class="seo-latex" aria-label="m equals y-sub-2 minus y-sub-1, divided by x-sub-2 minus x-sub-1">
+            <code itemprop="description">m = \frac{y_2 - y_1}{x_2 - x_1}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Slope"><li>Slope represents the rate of change between two points.</li><li>You may use any two points on the line — the result will always be the same.</li><li>Be consistent: if you do y₂ − y₁ on top, you must do x₂ − x₁ on the bottom.</li><li>Positive slopes rise left to right; negative slopes fall left to right.</li><li>A horizontal line has slope 0. A vertical line has undefined slope.</li></ul>
+          <section aria-label="Examples for Slope">
+          <div class="seo-example">
+            <p>Find the slope through (1, 2) and (4, 7).</p>
+            <p><code>m = \frac{7 - 2}{4 - 1} = \frac{5}{3}</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Find the slope through (−3, 4) and (2, −1).</p>
+            <p><code>m = \frac{-1 - 4}{2 - (-3)} = \frac{-5}{5} = -1</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Slope"><li>Interpreting steepness and direction of a line on a graph.</li><li>Understanding rate of change in real-world contexts: speed, cost per unit, temperature change, population growth.</li><li>Determining whether a relationship is increasing, decreasing, or constant.</li></ul>
+          <p>Related: <a href="#formula/point_slope">Point Slope</a>, <a href="#formula/slope_intercept">Slope Intercept</a>, <a href="#formula/distance">Distance</a>, <a href="#formula/midpoint">Midpoint</a>, <a href="#formula/average_rate_of_change">Average Rate Of Change</a></p>
+        </article>
+        <article id="formula-point_slope" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Point–Slope Form</h3>
+          <p class="seo-latex" aria-label="y minus y-sub-1 equals m times, open parenthesis, x minus x-sub-1, close parenthesis">
+            <code itemprop="description">y - y_1 = m(x - x_1)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Point–Slope Form"><li>Use point–slope form when you know a point on the line and its slope.</li><li>(x₁, y₁) is any known point on the line; m is the slope.</li><li>This form is especially useful when writing the equation of a line from two points.</li><li>You can convert to slope–intercept form by distributing and solving for y.</li><li>Either of the two given points can serve as (x₁, y₁) — both give the same line.</li></ul>
+          <section aria-label="Examples for Point–Slope Form">
+          <div class="seo-example">
+            <p>Write the equation of a line with slope 3 through (2, 5).</p>
+            <p><code>y - 5 = 3(x - 2)</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Write the equation through (−1, 4) and (3, −2). First find slope, then apply form.</p>
+            <p><code>m = \frac{-2-4}{3-(-1)} = \frac{-6}{4} = -\frac{3}{2} \quad\Rightarrow\quad y - 4 = -\frac{3}{2}(x + 1)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Point–Slope Form"><li>Writing the equation of a tangent line in calculus preparation.</li><li>Modeling any linear situation when you have a known data point and a rate of change.</li><li>Converting between forms of linear equations.</li></ul>
+          <p>Related: <a href="#formula/slope">Slope</a>, <a href="#formula/slope_intercept">Slope Intercept</a></p>
+        </article>
+        <article id="formula-slope_intercept" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Slope–Intercept Form</h3>
+          <p class="seo-latex" aria-label="y equals m times x plus b">
+            <code itemprop="description">y = mx + b</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Slope–Intercept Form"><li>m is the slope — the rate at which y changes for every 1-unit increase in x.</li><li>b is the y-intercept — the value of y when x = 0 (where the line crosses the y-axis).</li><li>This is the most common form for graphing a line quickly.</li><li>To graph: plot (0, b), then use slope m = rise/run to find a second point.</li><li>If an equation is not in this form, solve for y to reveal m and b.</li></ul>
+          <section aria-label="Examples for Slope–Intercept Form">
+          <div class="seo-example">
+            <p>Identify slope and y-intercept of y = 2x − 3.</p>
+            <p><code>m = 2, \quad b = -3</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Rewrite 3x + 2y = 8 in slope–intercept form.</p>
+            <p><code>2y = -3x + 8 \quad\Rightarrow\quad y = -\frac{3}{2}x + 4</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Slope–Intercept Form"><li>Graphing lines by hand using slope and y-intercept.</li><li>Interpreting linear models: the slope is the unit rate, and b is the starting value.</li><li>Writing equations from graphs by reading m and b directly.</li></ul>
+          <p>Related: <a href="#formula/slope">Slope</a>, <a href="#formula/point_slope">Point Slope</a>, <a href="#formula/standard_form">Standard Form</a></p>
+        </article>
+        <article id="formula-midpoint" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Midpoint Formula</h3>
+          <p class="seo-latex" aria-label="M equals the point with x-coordinate x-sub-1 plus x-sub-2 divided by 2, and y-coordinate y-sub-1 plus y-sub-2 divided by 2">
+            <code itemprop="description">M = \left(\frac{x_1 + x_2}{2},\, \frac{y_1 + y_2}{2}\right)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Midpoint Formula"><li>The midpoint is the exact center point between two given points.</li><li>Average the x-coordinates for the new x; average the y-coordinates for the new y.</li><li>The result is always a coordinate pair (x, y), not a single number.</li><li>Order of the points doesn't matter — averaging is commutative.</li><li>Useful when you need to bisect a segment or find the center of a diameter.</li></ul>
+          <section aria-label="Examples for Midpoint Formula">
+          <div class="seo-example">
+            <p>Find the midpoint between (2, 4) and (8, 10).</p>
+            <p><code>M = \left(\frac{2+8}{2}, \frac{4+10}{2}\right) = (5, 7)</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Find the midpoint between (−3, 1) and (5, −7).</p>
+            <p><code>M = \left(\frac{-3+5}{2}, \frac{1+(-7)}{2}\right) = (1, -3)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Midpoint Formula"><li>Finding the center of a circle given the endpoints of a diameter.</li><li>Bisecting a line segment in geometry and construction problems.</li><li>Locating halfway points in navigation, mapping, or data interpolation.</li></ul>
+          <p>Related: <a href="#formula/slope">Slope</a>, <a href="#formula/distance">Distance</a></p>
+        </article>
+        <article id="formula-distance" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Distance Formula</h3>
+          <p class="seo-latex" aria-label="d equals the square root of, open parenthesis, x-sub-2 minus x-sub-1, close parenthesis squared, plus, open parenthesis, y-sub-2 minus y-sub-1, close parenthesis squared">
+            <code itemprop="description">d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Distance Formula"><li>The distance formula is derived directly from the Pythagorean theorem.</li><li>It gives the straight-line (Euclidean) distance between any two points.</li><li>Order of subtraction doesn't matter — the result is squared, so negatives cancel.</li><li>The answer is always non-negative.</li><li>If the two points share an x-value (vertical) or y-value (horizontal), the formula still works but simplifies.</li></ul>
+          <section aria-label="Examples for Distance Formula">
+          <div class="seo-example">
+            <p>Find the distance between (1, 2) and (4, 6).</p>
+            <p><code>d = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = \sqrt{25} = 5</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Find the distance between (−2, 3) and (4, −5).</p>
+            <p><code>d = \sqrt{(4-(-2))^2 + (-5-3)^2} = \sqrt{36 + 64} = \sqrt{100} = 10</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Distance Formula"><li>Verifying the classification of triangles (equilateral, isosceles, scalene).</li><li>Finding the radius of a circle given its center and a point on it.</li><li>GPS and mapping: calculating straight-line distance between coordinates.</li></ul>
+          <p>Related: <a href="#formula/slope">Slope</a>, <a href="#formula/midpoint">Midpoint</a></p>
+        </article>
+      </section>
+      <section id="quadratics" aria-labelledby="section-quadratics">
+        <h2 id="section-quadratics">Quadratic Functions</h2>
+        
+        <article id="formula-standard_form" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Standard Form (Quadratic)</h3>
+          <p class="seo-latex" aria-label="y equals a times x squared, plus b times x, plus c">
+            <code itemprop="description">y = ax^2 + bx + c</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Standard Form (Quadratic)"><li>Standard form is the most common way a quadratic function is written.</li><li>a determines the direction and width of the parabola: if a &gt; 0 it opens up; if a &lt; 0 it opens down.</li><li>The larger |a| is, the narrower the parabola.</li><li>c is the y-intercept — the value of the function when x = 0.</li><li>From standard form you can find the axis of symmetry using x = −b/(2a), and then the vertex.</li></ul>
+          <section aria-label="Examples for Standard Form (Quadratic)">
+          <div class="seo-example">
+            <p>Identify a, b, and c in y = 3x² − 5x + 2.</p>
+            <p><code>a = 3, \quad b = -5, \quad c = 2</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Find the y-intercept of y = −2x² + 4x − 1.</p>
+            <p><code>\text{When } x = 0: \quad y = -2(0)^2 + 4(0) - 1 = -1</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Standard Form (Quadratic)"><li>Modeling projectile motion: height as a function of time.</li><li>Describing profit/loss curves in business contexts.</li><li>Serving as the entry point for applying the quadratic formula.</li></ul>
+          <p>Related: <a href="#formula/vertex_form">Vertex Form</a>, <a href="#formula/factored_form">Factored Form</a>, <a href="#formula/quadratic_formula">Quadratic Formula</a>, <a href="#formula/axis_of_symmetry">Axis Of Symmetry</a>, <a href="#formula/discriminant">Discriminant</a></p>
+        </article>
+        <article id="formula-vertex_form" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Vertex Form</h3>
+          <p class="seo-latex" aria-label="y equals a times, open parenthesis, x minus h, close parenthesis squared, plus k">
+            <code itemprop="description">y = a(x - h)^2 + k</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Vertex Form"><li>Vertex form reveals the vertex of the parabola immediately: the vertex is (h, k).</li><li>Watch the sign: y = a(x − 3)² + 5 has vertex (3, 5), not (−3, 5).</li><li>a still controls direction and width, just as in standard form.</li><li>If k &gt; 0, the vertex is above the x-axis. If k &lt; 0, it is below.</li><li>Convert from standard form to vertex form by completing the square.</li></ul>
+          <section aria-label="Examples for Vertex Form">
+          <div class="seo-example">
+            <p>Identify the vertex of y = 2(x − 4)² + 1.</p>
+            <p><code>\text{Vertex} = (4, 1), \quad \text{opens upward since } a = 2 &gt; 0</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Identify the vertex of y = −(x + 2)² − 3.</p>
+            <p><code>\text{Vertex} = (-2, -3), \quad \text{opens downward since } a = -1 &lt; 0</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Vertex Form"><li>Instantly reading the maximum or minimum value of a quadratic (the k-value).</li><li>Graphing parabolas quickly from a known vertex and direction.</li><li>Optimization problems: finding the peak height of a projectile, maximum profit, minimum cost.</li></ul>
+          <p>Related: <a href="#formula/standard_form">Standard Form</a>, <a href="#formula/factored_form">Factored Form</a>, <a href="#formula/axis_of_symmetry">Axis Of Symmetry</a></p>
+        </article>
+        <article id="formula-factored_form" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Factored Form</h3>
+          <p class="seo-latex" aria-label="y equals a times, open parenthesis, x minus r-sub-1, close parenthesis, times, open parenthesis, x minus r-sub-2, close parenthesis">
+            <code itemprop="description">y = a(x - r_1)(x - r_2)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Factored Form"><li>Factored form reveals the zeros (x-intercepts) of the parabola directly: they are r₁ and r₂.</li><li>Set each factor equal to zero to find the roots: x − r₁ = 0 gives x = r₁.</li><li>The axis of symmetry is the average of the two roots: x = (r₁ + r₂) / 2.</li><li>If a quadratic cannot be factored over integers, use the quadratic formula instead.</li><li>a is the same leading coefficient as in standard and vertex form.</li></ul>
+          <section aria-label="Examples for Factored Form">
+          <div class="seo-example">
+            <p>Identify the zeros of y = 2(x − 3)(x + 1).</p>
+            <p><code>x - 3 = 0 \Rightarrow x = 3 \qquad x + 1 = 0 \Rightarrow x = -1</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Factor y = x² − 5x + 6 into factored form.</p>
+            <p><code>y = (x - 2)(x - 3) \quad \Rightarrow \quad r_1 = 2, \; r_2 = 3</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Factored Form"><li>Finding where a projectile lands (when height = 0).</li><li>Determining break-even points in revenue/cost models.</li><li>Solving quadratic equations by setting y = 0 and reading off roots.</li></ul>
+          <p>Related: <a href="#formula/standard_form">Standard Form</a>, <a href="#formula/vertex_form">Vertex Form</a>, <a href="#formula/quadratic_formula">Quadratic Formula</a>, <a href="#formula/difference_of_squares">Difference Of Squares</a></p>
+        </article>
+        <article id="formula-quadratic_formula" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Quadratic Formula</h3>
+          <p class="seo-latex" aria-label="x equals negative b, plus or minus the square root of, b squared minus 4 a c, all divided by 2 a">
+            <code itemprop="description">x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Quadratic Formula"><li>The quadratic formula solves any quadratic equation in standard form ax² + bx + c = 0.</li><li>The ± means there are potentially two solutions — one with + and one with −.</li><li>Always identify a, b, and c carefully before substituting. Watch signs.</li><li>The expression under the radical, b² − 4ac, is the discriminant. It tells you how many real solutions exist.</li><li>If the discriminant is negative, there are no real solutions (the parabola doesn't cross the x-axis).</li></ul>
+          <section aria-label="Examples for Quadratic Formula">
+          <div class="seo-example">
+            <p>Solve x² − 5x + 6 = 0 using the quadratic formula.</p>
+            <p><code>x = \frac{5 \pm \sqrt{25 - 24}}{2} = \frac{5 \pm 1}{2} \quad\Rightarrow\quad x = 3 \text{ or } x = 2</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Solve 2x² + 3x − 2 = 0.</p>
+            <p><code>x = \frac{-3 \pm \sqrt{9 + 16}}{4} = \frac{-3 \pm 5}{4} \quad\Rightarrow\quad x = \tfrac{1}{2} \text{ or } x = -2</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Quadratic Formula"><li>Solving any quadratic equation when factoring is not obvious or possible.</li><li>Finding the x-intercepts of any parabola.</li><li>Calculating time values in physics problems involving height and gravity.</li></ul>
+          <p>Related: <a href="#formula/standard_form">Standard Form</a>, <a href="#formula/discriminant">Discriminant</a>, <a href="#formula/factored_form">Factored Form</a></p>
+        </article>
+        <article id="formula-discriminant" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Discriminant</h3>
+          <p class="seo-latex" aria-label="D equals b squared minus 4 times a times c">
+            <code itemprop="description">D = b^2 - 4ac</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Discriminant"><li>The discriminant is the expression inside the square root of the quadratic formula.</li><li>If D &gt; 0: two distinct real solutions (the parabola crosses the x-axis twice).</li><li>If D = 0: exactly one real solution, a repeated root (the parabola touches the x-axis once).</li><li>If D &lt; 0: no real solutions (the parabola does not cross the x-axis).</li><li>You can classify the number of solutions before solving — saving time on exams.</li></ul>
+          <section aria-label="Examples for Discriminant">
+          <div class="seo-example">
+            <p>How many real solutions does 2x² − 4x + 2 = 0 have?</p>
+            <p><code>D = (-4)^2 - 4(2)(2) = 16 - 16 = 0 \quad\Rightarrow\quad \text{one repeated solution}</code></p>
+          </div>
+          <div class="seo-example">
+            <p>How many real solutions does x² + x + 1 = 0 have?</p>
+            <p><code>D = 1^2 - 4(1)(1) = 1 - 4 = -3 \quad\Rightarrow\quad \text{no real solutions}</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Discriminant"><li>Quickly determining whether a quadratic is solvable by real methods before attempting to solve.</li><li>Predicting whether a projectile reaches a given height.</li><li>Analyzing whether two curves intersect in algebra and calculus.</li></ul>
+          <p>Related: <a href="#formula/quadratic_formula">Quadratic Formula</a>, <a href="#formula/standard_form">Standard Form</a></p>
+        </article>
+        <article id="formula-axis_of_symmetry" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Axis of Symmetry</h3>
+          <p class="seo-latex" aria-label="x equals negative b divided by 2 a">
+            <code itemprop="description">x = -\frac{b}{2a}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Axis of Symmetry"><li>The axis of symmetry is the vertical line that divides a parabola into two mirror-image halves.</li><li>It always passes through the vertex — so x = −b/(2a) gives the x-coordinate of the vertex.</li><li>Substitute this x-value back into the original equation to find the y-coordinate of the vertex.</li><li>The axis of symmetry is also the average of the two x-intercepts (when they exist).</li><li>For a parabola in vertex form y = a(x − h)² + k, the axis of symmetry is simply x = h.</li></ul>
+          <section aria-label="Examples for Axis of Symmetry">
+          <div class="seo-example">
+            <p>Find the axis of symmetry of y = 2x² − 8x + 3.</p>
+            <p><code>x = -\frac{-8}{2(2)} = \frac{8}{4} = 2</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Then find the vertex by substituting x = 2 back in.</p>
+            <p><code>y = 2(2)^2 - 8(2) + 3 = 8 - 16 + 3 = -5 \quad\Rightarrow\quad \text{Vertex: } (2, -5)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Axis of Symmetry"><li>Graphing a parabola efficiently — find axis, then vertex, then two symmetric points.</li><li>Solving optimization problems where you need the minimum or maximum output.</li><li>Verifying vertex form: h should match the axis of symmetry value.</li></ul>
+          <p>Related: <a href="#formula/standard_form">Standard Form</a>, <a href="#formula/vertex_form">Vertex Form</a>, <a href="#formula/quadratic_formula">Quadratic Formula</a></p>
+        </article>
+      </section>
+      <section id="exponents" aria-labelledby="section-exponents">
+        <h2 id="section-exponents">Exponents &amp; Radicals</h2>
+        
+        <article id="formula-product_rule" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Product Rule (Exponents)</h3>
+          <p class="seo-latex" aria-label="a to the m times a to the n equals a to the m plus n">
+            <code itemprop="description">a^m \cdot a^n = a^{m+n}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Product Rule (Exponents)"><li>When multiplying two powers with the same base, keep the base and add the exponents.</li><li>The bases must be identical — you cannot combine x³ · y² using this rule.</li><li>Works for integer, fractional, and negative exponents.</li><li>This rule extends to three or more factors: a² · a³ · a⁴ = a⁹.</li><li>Remember: multiply the bases? No — add the exponents. The base stays the same.</li></ul>
+          <section aria-label="Examples for Product Rule (Exponents)">
+          <div class="seo-example">
+            <p>Simplify x³ · x⁵.</p>
+            <p><code>x^3 \cdot x^5 = x^{3+5} = x^8</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Simplify 2³ · 2⁴.</p>
+            <p><code>2^3 \cdot 2^4 = 2^{3+4} = 2^7 = 128</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Product Rule (Exponents)"><li>Simplifying algebraic expressions in polynomials.</li><li>Combining exponential terms in scientific notation.</li><li>Working with monomials in polynomial multiplication.</li></ul>
+          <p>Related: <a href="#formula/quotient_rule">Quotient Rule</a>, <a href="#formula/power_rule">Power Rule</a>, <a href="#formula/fractional_exponent">Fractional Exponent</a></p>
+        </article>
+        <article id="formula-quotient_rule" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Quotient Rule (Exponents)</h3>
+          <p class="seo-latex" aria-label="a to the m divided by a to the n equals a to the m minus n">
+            <code itemprop="description">\frac{a^m}{a^n} = a^{m-n}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Quotient Rule (Exponents)"><li>When dividing two powers with the same base, keep the base and subtract the exponents.</li><li>Always subtract the denominator's exponent from the numerator's: top minus bottom.</li><li>If m &lt; n, the result is a negative exponent: a⁻² = 1/a².</li><li>If m = n, the result is a⁰ = 1 (for any nonzero base).</li><li>The bases must be the same — this rule doesn't apply to different bases.</li></ul>
+          <section aria-label="Examples for Quotient Rule (Exponents)">
+          <div class="seo-example">
+            <p>Simplify x⁷ ÷ x³.</p>
+            <p><code>\frac{x^7}{x^3} = x^{7-3} = x^4</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Simplify a² ÷ a⁵.</p>
+            <p><code>\frac{a^2}{a^5} = a^{2-5} = a^{-3} = \frac{1}{a^3}</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Quotient Rule (Exponents)"><li>Simplifying rational expressions with matching bases.</li><li>Reducing scientific notation expressions.</li><li>Deriving zero and negative exponent rules.</li></ul>
+          <p>Related: <a href="#formula/product_rule">Product Rule</a>, <a href="#formula/power_rule">Power Rule</a>, <a href="#formula/fractional_exponent">Fractional Exponent</a></p>
+        </article>
+        <article id="formula-power_rule" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Power Rule (Exponents)</h3>
+          <p class="seo-latex" aria-label="open parenthesis a to the m close parenthesis to the n equals a to the m times n">
+            <code itemprop="description">(a^m)^n = a^{mn}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Power Rule (Exponents)"><li>When raising a power to another power, keep the base and multiply the exponents.</li><li>This is different from the product rule — here the exponents multiply, not add.</li><li>Extends to products inside parentheses: (ab)ⁿ = aⁿbⁿ.</li><li>Also extends to quotients: (a/b)ⁿ = aⁿ/bⁿ.</li><li>Common mistake: (x²)³ = x⁶, not x⁵. Multiply, don't add, when raising a power to a power.</li></ul>
+          <section aria-label="Examples for Power Rule (Exponents)">
+          <div class="seo-example">
+            <p>Simplify (x³)⁴.</p>
+            <p><code>(x^3)^4 = x^{3 \cdot 4} = x^{12}</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Simplify (2x²y³)³.</p>
+            <p><code>(2x^2y^3)^3 = 2^3 x^{2 \cdot 3} y^{3 \cdot 3} = 8x^6y^9</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Power Rule (Exponents)"><li>Simplifying expressions with nested exponents.</li><li>Expanding polynomial expressions involving powers of binomials (preparation for binomial theorem).</li><li>Working with scientific notation raised to a power.</li></ul>
+          <p>Related: <a href="#formula/product_rule">Product Rule</a>, <a href="#formula/quotient_rule">Quotient Rule</a>, <a href="#formula/fractional_exponent">Fractional Exponent</a></p>
+        </article>
+        <article id="formula-radical_product" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Radical Product Rule</h3>
+          <p class="seo-latex" aria-label="the square root of a times b equals the square root of a, times the square root of b">
+            <code itemprop="description">\sqrt{ab} = \sqrt{a} \cdot \sqrt{b}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Radical Product Rule"><li>The square root of a product equals the product of the individual square roots.</li><li>Use this to simplify radicals by factoring out perfect squares.</li><li>Also works in reverse — you can combine two radicals into one: √3 · √5 = √15.</li><li>Requires a ≥ 0 and b ≥ 0 when working in real numbers.</li><li>Common application: √50 = √(25 · 2) = √25 · √2 = 5√2.</li></ul>
+          <section aria-label="Examples for Radical Product Rule">
+          <div class="seo-example">
+            <p>Simplify √72.</p>
+            <p><code>\sqrt{72} = \sqrt{36 \cdot 2} = \sqrt{36} \cdot \sqrt{2} = 6\sqrt{2}</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Multiply √3 · √12.</p>
+            <p><code>\sqrt{3} \cdot \sqrt{12} = \sqrt{36} = 6</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Radical Product Rule"><li>Simplifying radical expressions to simplest form.</li><li>Rationalizing denominators in fractions.</li><li>Combining and comparing radical expressions.</li></ul>
+          <p>Related: <a href="#formula/fractional_exponent">Fractional Exponent</a>, <a href="#formula/product_rule">Product Rule</a></p>
+        </article>
+        <article id="formula-fractional_exponent" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Fractional Exponent</h3>
+          <p class="seo-latex" aria-label="a to the one over n equals the nth root of a">
+            <code itemprop="description">a^{1/n} = \sqrt[n]{a}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Fractional Exponent"><li>A fractional exponent is just another way to write a root.</li><li>The denominator of the fraction tells you which root to take.</li><li>The general form is a^(m/n) = (ⁿ√a)^m = ⁿ√(aᵐ) — root first is usually easier.</li><li>Negative fractional exponents flip the base: a^(−1/n) = 1 / ⁿ√a.</li><li>Treat fractional exponents with the same rules as integer exponents (product, quotient, power).</li></ul>
+          <section aria-label="Examples for Fractional Exponent">
+          <div class="seo-example">
+            <p>Evaluate 8^(1/3).</p>
+            <p><code>8^{1/3} = \sqrt[3]{8} = 2</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Evaluate 16^(3/4).</p>
+            <p><code>16^{3/4} = (\sqrt[4]{16})^3 = 2^3 = 8</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Fractional Exponent"><li>Rewriting roots as exponents to apply exponent rules more easily.</li><li>Evaluating expressions involving roots without a calculator.</li><li>Connecting radical notation to exponential notation in higher mathematics.</li></ul>
+          <p>Related: <a href="#formula/radical_product">Radical Product</a>, <a href="#formula/product_rule">Product Rule</a>, <a href="#formula/power_rule">Power Rule</a></p>
+        </article>
+      </section>
+      <section id="polynomials" aria-labelledby="section-polynomials">
+        <h2 id="section-polynomials">Polynomial Factoring</h2>
+        
+        <article id="formula-difference_of_squares" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Difference of Squares</h3>
+          <p class="seo-latex" aria-label="a squared minus b squared equals, open parenthesis, a minus b, close parenthesis, times, open parenthesis, a plus b, close parenthesis">
+            <code itemprop="description">a^2 - b^2 = (a - b)(a + b)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Difference of Squares"><li>This pattern only works for subtraction — a sum of squares (a² + b²) does not factor over the reals.</li><li>Both terms must be perfect squares: look for squared variables or perfect square coefficients.</li><li>The two factors are conjugates: one has a plus, the other has a minus.</li><li>When multiplied back out, the middle terms cancel, leaving only the difference of squares.</li><li>Check: is each term a perfect square? Is there a minus between them? If yes to both, apply this pattern.</li></ul>
+          <section aria-label="Examples for Difference of Squares">
+          <div class="seo-example">
+            <p>Factor x² − 25.</p>
+            <p><code>x^2 - 25 = (x-5)(x+5)</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Factor 4x² − 9.</p>
+            <p><code>4x^2 - 9 = (2x - 3)(2x + 3)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Difference of Squares"><li>Quickly factoring expressions without using trial and error.</li><li>Solving equations like x² = 49 by recognizing x² − 49 = 0.</li><li>Simplifying rational expressions by canceling common factors after factoring.</li></ul>
+          <p>Related: <a href="#formula/factored_form">Factored Form</a>, <a href="#formula/sum_of_cubes">Sum Of Cubes</a>, <a href="#formula/difference_of_cubes">Difference Of Cubes</a></p>
+        </article>
+        <article id="formula-sum_of_cubes" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Sum of Cubes</h3>
+          <p class="seo-latex" aria-label="a cubed plus b cubed equals, open parenthesis, a plus b, close parenthesis, times, open parenthesis, a squared minus a b plus b squared, close parenthesis">
+            <code itemprop="description">a^3 + b^3 = (a + b)(a^2 - ab + b^2)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Sum of Cubes"><li>Memorize the pattern: the first factor matches the sign of the original (plus), and the trinomial follows SOAP — Same, Opposite, Always Positive.</li><li>SOAP: Same sign as original (+), Opposite sign (−ab), Always Positive (+b²).</li><li>The trinomial factor (a² − ab + b²) does not factor further over the reals.</li><li>Both terms must be perfect cubes: 1, 8, 27, 64, 125, ... and their variable equivalents.</li><li>Do not confuse with the difference of cubes — the only change is the sign of the linear factor.</li></ul>
+          <section aria-label="Examples for Sum of Cubes">
+          <div class="seo-example">
+            <p>Factor x³ + 8.</p>
+            <p><code>x^3 + 8 = x^3 + 2^3 = (x + 2)(x^2 - 2x + 4)</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Factor 27x³ + 64.</p>
+            <p><code>27x^3 + 64 = (3x)^3 + 4^3 = (3x + 4)(9x^2 - 12x + 16)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Sum of Cubes"><li>Factoring cubic polynomials that match the sum-of-cubes pattern.</li><li>Simplifying rational expressions involving cubic terms.</li><li>Foundation for polynomial long division and higher-degree factoring.</li></ul>
+          <p>Related: <a href="#formula/difference_of_cubes">Difference Of Cubes</a>, <a href="#formula/difference_of_squares">Difference Of Squares</a></p>
+        </article>
+        <article id="formula-difference_of_cubes" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Difference of Cubes</h3>
+          <p class="seo-latex" aria-label="a cubed minus b cubed equals, open parenthesis, a minus b, close parenthesis, times, open parenthesis, a squared plus a b plus b squared, close parenthesis">
+            <code itemprop="description">a^3 - b^3 = (a - b)(a^2 + ab + b^2)</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Difference of Cubes"><li>Like the sum of cubes, use the SOAP mnemonic: Same, Opposite, Always Positive.</li><li>SOAP: Same sign as original (−), Opposite sign (+ab), Always Positive (+b²).</li><li>The trinomial factor (a² + ab + b²) does not factor further over the reals.</li><li>Identify a and b by taking the cube root of each term.</li><li>The only difference from sum of cubes is the sign of the linear factor and the middle term of the trinomial.</li></ul>
+          <section aria-label="Examples for Difference of Cubes">
+          <div class="seo-example">
+            <p>Factor x³ − 27.</p>
+            <p><code>x^3 - 27 = x^3 - 3^3 = (x - 3)(x^2 + 3x + 9)</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Factor 8x³ − 125.</p>
+            <p><code>8x^3 - 125 = (2x)^3 - 5^3 = (2x - 5)(4x^2 + 10x + 25)</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Difference of Cubes"><li>Factoring cubic expressions that fit the difference-of-cubes pattern.</li><li>Simplifying rational expressions with cubic denominators.</li><li>Solving cubic equations of the form a³ = b³.</li></ul>
+          <p>Related: <a href="#formula/sum_of_cubes">Sum Of Cubes</a>, <a href="#formula/difference_of_squares">Difference Of Squares</a></p>
+        </article>
+      </section>
+      <section id="functions" aria-labelledby="section-functions">
+        <h2 id="section-functions">Functions &amp; Rates</h2>
+        
+        <article id="formula-average_rate_of_change" itemscope itemtype="https://schema.org/DefinedTerm">
+          <h3 itemprop="name">Average Rate of Change</h3>
+          <p class="seo-latex" aria-label="f of b minus f of a, divided by b minus a">
+            <code itemprop="description">\frac{f(b) - f(a)}{b - a}</code>
+          </p>
+          <ul class="seo-notes" aria-label="Notes about Average Rate of Change"><li>The average rate of change measures how much a function's output changes per unit of input over an interval.</li><li>It is the slope of the secant line connecting the two points (a, f(a)) and (b, f(b)) on the graph.</li><li>For a linear function, the average rate of change is always equal to the slope m.</li><li>For a nonlinear function (like a parabola), the rate of change varies — this formula gives the average over [a, b].</li><li>This formula is the foundation of differential calculus — the derivative is the limit of the average rate of change as the interval shrinks to zero.</li></ul>
+          <section aria-label="Examples for Average Rate of Change">
+          <div class="seo-example">
+            <p>Find the average rate of change of f(x) = x² on [1, 4].</p>
+            <p><code>\frac{f(4) - f(1)}{4 - 1} = \frac{16 - 1}{3} = \frac{15}{3} = 5</code></p>
+          </div>
+          <div class="seo-example">
+            <p>Find the average rate of change of f(x) = 2x + 3 on [0, 5].</p>
+            <p><code>\frac{f(5) - f(0)}{5 - 0} = \frac{13 - 3}{5} = \frac{10}{5} = 2</code></p>
+          </div></section>
+          <ul class="seo-applications" aria-label="Applications of Average Rate of Change"><li>Calculating average speed, average velocity, or average acceleration over a time interval.</li><li>Comparing growth rates of different functions over the same interval.</li><li>Approximating instantaneous rates of change — the gateway concept to calculus.</li></ul>
+          <p>Related: <a href="#formula/slope">Slope</a>, <a href="#formula/slope_intercept">Slope Intercept</a></p>
+        </article>
+      </section>
+</div>
+<!-- /build:seo -->
 </body>
 </html>
