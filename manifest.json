@@ -1,7 +1,7 @@
 {
-  "name": "MAT1033C SLC Survival Guide",
-  "short_name": "MAT1033C",
-  "description": "Intermediate Algebra formula reference for PBSC students. Free, accessible, multilingual.",
+  "name": "SLC Alegbra Guide",
+  "short_name": "SLC Algebra",
+  "description": "Algebra formula reference for PBSC students. Free, accessible, multilingual.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#08152C",
